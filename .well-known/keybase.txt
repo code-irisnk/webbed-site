@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/irisnk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://irisnk.me
+  * I am irisnk (https://keybase.io/irisnk) on keybase.
+  * I have a public key ASDU3dcGfE02x3U3_2m0OKPps2Q65n-seorwC27Jg7s74Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d4ddd7067c4d36c77537ff69b438a3e9b3643ae67fac7a8af00b6ec983bb3be00a",
+      "host": "keybase.io",
+      "kid": "0120d4ddd7067c4d36c77537ff69b438a3e9b3643ae67fac7a8af00b6ec983bb3be00a",
+      "uid": "4fbfc340443e97da82b3eb730ef2f519",
+      "username": "irisnk"
+    },
+    "merkle_root": {
+      "ctime": 1714405673,
+      "hash": "7c2ee83863d91235dfb2810af71771c461924e7f609cfd64df0716b06c0d0a5e27a8e2d9c685a0c30dce4ceb951284c5a05d01359d22bf5dd708e6a17d0cb702",
+      "hash_meta": "8e4355e723e70638cc3f04248f73bacc12b51da52106582963add93ddb250f86",
+      "seqno": 25685081
+    },
+    "service": {
+      "entropy": "Ngo7h2EKb8HaHCa9fPCJ3uAN",
+      "hostname": "irisnk.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.8"
+  },
+  "ctime": 1714405723,
+  "expire_in": 504576000,
+  "prev": "b63c63af4f676a6e8199159511ec67cbbd177b45e4f5216393d1ad268ba93b33",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg1N3XBnxNNsd1N/9ptDij6bNkOuZ/rHqK8AtuyYO7O+AKp3BheWxvYWTESpcCBcQgtjxjr09nam6BmRWVEexny70Xe0Xk9SFjk9GtJoupOzPEIBbmZBUMyy0CwfeN5C7Sxf2HbXXGhMjH4XyByGI2nRe9AgHCo3NpZ8RA7RqpYGm2rMc3uDD2jyuT2519DZO981xKKDAsrEMGzE2AfuyX7UE9mit9bXsW4u3nU7q/NmDIkycF0YUJ9R9GC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAWHUY2gm7i2ecwrPvokmy4GxEcCzuPV9065DeB3jPTdo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/irisnk
+
+==================================================================

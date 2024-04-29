@@ -1,21 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5e1ea; /* pink */
-    color: #333; /* dark gray */
+    background-color: #f5e1ea;
+    /* pink */
+    color: #333;
+    /* dark gray */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 header {
-    background-color: #ff9eb1; /* light pink */
+    background-color: #ff9eb1;
+    /* light pink */
     padding: 20px;
     text-align: center;
 }
 
 h1 {
     margin-top: 0;
-    color: #333; /* dark gray */
+    color: #333;
+    /* dark gray */
 }
 
 section {
@@ -27,7 +31,8 @@ section {
 }
 
 .info h2 {
-    color: #333; /* dark gray */
+    color: #333;
+    /* dark gray */
     margin-top: 0;
 }
 
@@ -41,7 +46,8 @@ section {
 }
 
 footer {
-    background-color: #ff9eb1; /* light pink */
+    background-color: #ff9eb1;
+    /* light pink */
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -49,8 +55,102 @@ footer {
     width: 100%;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* Adjust as needed */
+    background-color: #ff9eb1;
+    /* pink */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
 #profile-picture {
+    width: 50px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
     border-radius: 50%;
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
+    margin-right: 10px;
+    /* Adjust as needed */
+}
+
+h1#wobble {
+    margin: 0;
+    text-align: center;
+    /* Center the text */
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-right: 10px;
+    /* Adjust as needed */
+    text-decoration: none;
+    color: #333;
+    /* Adjust as needed */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.column-right {
+    float: right;
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.column-left {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.columns {
+    overflow: hidden;
+    /* clearfix */
+}
+
+.column {
+    box-sizing: border-box;
+    /* include padding and border in the width */
+    padding: 10px;
+    float: left;
+    width: 50%;
+}
+
+.center {
+    margin: 0 auto;
+    width: 50%;
 }
