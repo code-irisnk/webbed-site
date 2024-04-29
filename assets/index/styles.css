@@ -72,22 +72,18 @@ header {
 
 #profile-picture {
     width: 50px;
-    /* Adjust as needed */
     height: 50px;
-    /* Adjust as needed */
     border-radius: 50%;
-    margin-right: 10px;
-    /* Adjust as needed */
+    margin-right: 0.65rem;
 }
 
 h1#wobble {
     margin: 0;
-    text-align: center;
-    /* Center the text */
 }
 
 nav {
     display: flex;
+    align-items: center;
 }
 
 nav a {
