@@ -70,6 +70,6 @@ footer {
     padding: 10px;
     text-align: center;
     width: 100%;
-    position: fixed;
+    position: static;
     bottom: 0;
 }
