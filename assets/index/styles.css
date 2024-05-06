@@ -1,3 +1,4 @@
+/* Reset and basic styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5e1ea;
@@ -5,39 +6,53 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Main content area */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #ff9eb1;
 }
 
+/* Profile Picture */
 #profile-picture {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
 }
 
-h1#wobble {
-    margin: 0;
-}
-
+/* Header Left */
 .header-left {
     display: flex;
     align-items: center;
 }
 
+/* Navigation */
 nav {
     display: flex;
     align-items: center;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
 }
 
 nav a {
-    margin-right: 10px;
+    margin-right: 0.625rem;
     text-decoration: none;
     color: #333;
 }
@@ -46,15 +61,52 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Centered Content */
 .center {
     margin: 0 auto;
     width: 50%;
 }
 
-.section {
-    padding: 20px;
+/* Sections */
+.section,
+.section-borderless {
+    padding: 1.25rem;
 }
 
+.section {
+    border-bottom: 0.0625rem solid #ccc;
+}
+
+.section-borderless {
+    border: none;
+}
+
+/* Dotted List */
+.dotted-list {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+
+.dotted-list li {
+    margin-bottom: 0.3125rem;
+}
+
+.dotted-list li::before {
+    content: "•";
+    margin-right: 0.3125rem;
+}
+
+/* Last Child Styles */
+.dotted-list li:last-child {
+    margin-bottom: 0;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+/* Info */
 .info h2 {
     color: #333;
     margin-top: 0;
@@ -66,18 +118,19 @@ nav a:hover {
 }
 
 .info ul li {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
+/* Footer */
 footer {
     background-color: #ff9eb1;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
     width: 100%;
-    position: static;
-    bottom: 0;
+    margin-top: auto;
 }
 
+/* Columns */
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -85,16 +138,15 @@ footer {
 
 .column {
     box-sizing: border-box;
-    padding: 20px;
+    padding: 1.25rem;
     margin-top: 1rem;
     width: 50%;
 }
 
-@media (max-width: 600px) {
-    .center {
-        width: 100%;
-    }
+/* Media Query for Small Screens */
+@media (max-width: 37.5rem) {
 
+    .center,
     .column {
         width: 100%;
     }
