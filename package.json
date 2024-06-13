@@ -3,6 +3,7 @@
     "prettier": "3.2.5"
   },
   "dependencies": {
+    "js-beautify": "^1.15.1",
     "static-sitemap-cli": "^2.2.3"
   }
 }
