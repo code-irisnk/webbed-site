@@ -4,4 +4,4 @@ const fs = require('fs');
 const commitSha = execSync('git rev-parse --short HEAD').toString().trim();
 console.log(`Current commit SHA: ${commitSha}`);
 
-fs.writeFileSync('public/commit-sha', JSON.stringify({ sha: commitSha }));
+fs.writeFileSync('commit-sha', JSON.stringify({ sha: commitSha }));
