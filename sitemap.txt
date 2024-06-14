@@ -12,6 +12,8 @@ https://irisnk.me/ssh
 https://irisnk.me/tumblr-bak/clovergreytime
 https://irisnk.me/tumblr-bak/irisnkrichronos
 https://irisnk.me/tumblr-bak/nyaambxr
+https://irisnk.me/node_modules/tslib/tslib
+https://irisnk.me/node_modules/tslib/tslib.es6
 https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-05-p1
 https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-06-p1
 https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-07-p1
@@ -895,3 +897,4 @@ https://irisnk.me/tumblr-bak/nyaambxr/posts/746674486121775104
 https://irisnk.me/tumblr-bak/nyaambxr/posts/746745492202979328
 https://irisnk.me/tumblr-bak/nyaambxr/posts/747021615849750528
 https://irisnk.me/tumblr-bak/nyaambxr/posts/748952527490449408
+https://irisnk.me/node_modules/get-source/test/files/test

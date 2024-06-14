@@ -68,11 +68,22 @@
   <footer>
     <p>
       Copyleft: irisnk and <a href="contributors.html">contributors</a>!
-      <a href="https://github.com/code-irisnk/webbed-site/pulls">PR me,</a> or <a href="mailto:irisnk@elrant.team">email me a patch!</a>
+      <a href="https://github.com/code-irisnk/webbed-site/pulls">PR me,</a> or <a href="mailto:irisnk@elrant.team">email
+        me a patch!</a>
+      <a id="commit-sha">Loading commit SHA...</a>
     </p>
+    <script>
+      fetch('/commit-sha')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('commit-sha').textContent = `Commit SHA: ${data.sha}`;
+        })
+        .catch(error => {
+          console.error('Error fetching commit SHA:', error);
+          document.getElementById('commit-sha').textContent = 'Error loading commit SHA';
+        });
+    </script>
   </footer>
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "57631e52d8e343cba6c6d0edc9b542b5"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
