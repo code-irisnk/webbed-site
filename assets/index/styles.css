@@ -190,6 +190,18 @@ footer {
     animation-delay: -0.8s;
 }
 
+.wobble6 {
+    animation-delay: -1.0s;
+}
+
+.wobble7 {
+    animation-delay: -1.2s;
+}
+
+.wobble8 {
+    animation-delay: -1.4s;
+}
+
 /* Media Query for Small Screens */
 @media (max-width: 37.5rem) {
     #wobble {
