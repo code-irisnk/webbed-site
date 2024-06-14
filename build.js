@@ -1,7 +1,7 @@
 const { execSync } = require('child_process');
+const fs = require('fs');
+
 const commitSha = execSync('git rev-parse --short HEAD').toString().trim();
+console.log(`Current commit SHA: ${commitSha}`);
 
-// Set the environment variable
-process.env.COMMIT_SHA = commitSha;
-
-// Other build steps...
+fs.writeFileSync('public/commit-sha', JSON.stringify({ sha: commitSha }));
