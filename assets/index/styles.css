@@ -33,7 +33,6 @@ header {
     box-sizing: border-box;
 }
 
-
 /* Profile Picture */
 #profile-picture {
     width: 3.125rem;
@@ -152,13 +151,20 @@ footer {
 
 /* Text Animation */
 @keyframes wobble {
-    from {position: relative; top: -3px;}
-    to {position: relative; top: 3px;}
+    from {
+        position: relative;
+        top: -3px;
+    }
+
+    to {
+        position: relative;
+        top: 3px;
+    }
 }
 
 .wobble {
     animation-name: wobble;
-    animation-duration: 0.5s;
+    animation-duration: 0.8s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -184,7 +190,6 @@ footer {
     animation-delay: -0.8s;
 }
 
-
 /* Media Query for Small Screens */
 @media (max-width: 37.5rem) {
     #wobble {
@@ -203,4 +208,3 @@ footer {
         animation-duration: 0s;
     }
 }
-  

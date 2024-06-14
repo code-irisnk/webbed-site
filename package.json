@@ -1,9 +1,11 @@
 {
   "devDependencies": {
-    "prettier": "3.2.5"
-  },
-  "dependencies": {
     "js-beautify": "^1.15.1",
+    "prettier": "^3.2.5",
     "static-sitemap-cli": "^2.2.3"
+  },
+  "scripts": {
+    "format": "find . -name '*.js' ! -path './node_modules/*' -exec js-beautify --type js --replace --indent-size 4 --max-preserve-newlines 0 {} + && find . -name '*.html' ! -path './node_modules/*' -exec js-beautify --type html --replace --indent-size 2 --max-preserve-newlines 0 {} + && find . -name '*.css' ! -path './node_modules/*' -exec js-beautify --type css --replace --indent-size 4 --max-preserve-newlines 0 {} +",
+    "generate-sitemap": "sscli -b https://irisnk.me -r /home/irisnk/webbed-site/"
   }
 }
