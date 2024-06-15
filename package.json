@@ -6,9 +6,13 @@
     "wrangler": "^3.60.3"
   },
   "scripts": {
-    "format": "find . -name '*.js' ! -path './node_modules/*' -exec js-beautify --type js --replace --indent-size 4 --max-preserve-newlines -1 {} + && find . -name '*.html' ! -path './node_modules/*' -exec js-beautify --type html --replace --indent-size 2 --max-preserve-newlines -1 {} + && find . -name '*.css' ! -path './node_modules/*' -exec js-beautify --type css --replace --indent-size 4 --max-preserve-newlines -1 {} +",
+    "format-js": "find . -name '*.js' ! -path './node_modules/*' ! -path './tumblr-bak/*' ! -name '.*' ! -path '*/.*/*' -exec js-beautify --type js --replace --indent-size 4 --max-preserve-newlines -1 {} +",
+    "format-html": "find . -name '*.html' ! -path './node_modules/*' ! -path './tumblr-bak/*' ! -name '.*' ! -path '*/.*/*' -exec js-beautify --type html --replace --indent-size 2 --max-preserve-newlines -1 {} +",
+    "format-css": "find . -name '*.css' ! -path './node_modules/*' ! -path './tumblr-bak/*' ! -name '.*' ! -path '*/.*/*' -exec js-beautify --type css --replace --indent-size 4 --max-preserve-newlines -1 {} +",
+    "format": "npm run format-js && npm run format-html && npm run format-css",
     "generate-sitemap": "sscli -b https://irisnk.me -r /home/irisnk/webbed-site/",
-    "deploy": "node build.js"
+    "deploy": "node deploy.js",
+    "build": "npm run generate-sitemap && npm run format"
   },
   "dependencies": {}
 }
