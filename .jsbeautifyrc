@@ -1,0 +1,14 @@
+{
+  "js": {
+    "indent_size": 4,
+    "preserve_newlines": false
+  },
+  "css": {
+    "indent_size": 4,
+    "preserve_newlines": false
+  },
+  "html": {
+    "indent_size": 2,
+    "preserve_newlines": false
+  }
+}
