@@ -1,3 +1,5 @@
+// This file is not to be ran directly, but rather as a part of the build process.
+// Please do not run it manually, let Cloudflare Pages handle it.
 const {
     execSync
 } = require('child_process');
