@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://irisnk.me/</loc>
-        <lastmod>2024-06-15T13:16:28.846Z</lastmod>
+        <lastmod>2024-06-16T17:10:47.847Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/age</loc>
-        <lastmod>2024-06-15T13:16:28.838Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.440Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/blog</loc>
-        <lastmod>2024-06-15T13:16:28.855Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.433Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/contact</loc>
-        <lastmod>2024-06-15T13:16:28.840Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.440Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/contributors</loc>
-        <lastmod>2024-06-15T13:16:28.852Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.433Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/donate</loc>
-        <lastmod>2024-06-15T13:31:09.905Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.414Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/friends</loc>
-        <lastmod>2024-06-15T13:16:28.843Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.440Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/git</loc>
-        <lastmod>2024-06-15T13:16:28.858Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.433Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/sitemap</loc>
-        <lastmod>2024-06-15T13:16:28.862Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.413Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/socials</loc>
-        <lastmod>2024-06-15T13:16:28.848Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.435Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/ssh</loc>
-        <lastmod>2024-06-15T13:16:28.850Z</lastmod>
+        <lastmod>2024-06-16T14:42:44.433Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/tumblr-bak/clovergreytime</loc>
@@ -63,6 +63,10 @@
     <url>
         <loc>https://irisnk.me/node_modules/tslib/tslib.es6</loc>
         <lastmod>2024-06-14T18:07:47.590Z</lastmod>
+    </url>
+    <url>
+        <loc>https://irisnk.me/node_modules/uglify-js/tools/domprops</loc>
+        <lastmod>2024-06-15T21:40:21.808Z</lastmod>
     </url>
     <url>
         <loc>https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-05-p1</loc>

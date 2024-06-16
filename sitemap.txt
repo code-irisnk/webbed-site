@@ -14,6 +14,7 @@ https://irisnk.me/tumblr-bak/irisnkrichronos
 https://irisnk.me/tumblr-bak/nyaambxr
 https://irisnk.me/node_modules/tslib/tslib
 https://irisnk.me/node_modules/tslib/tslib.es6
+https://irisnk.me/node_modules/uglify-js/tools/domprops
 https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-05-p1
 https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-06-p1
 https://irisnk.me/tumblr-bak/clovergreytime/archive/2023-07-p1
