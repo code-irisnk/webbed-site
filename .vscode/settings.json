@@ -13,7 +13,8 @@
         ".hintrc": true,
         ".jsbeautifyrc": true,
         "package-lock.json": true,
-        "LICENSE": true
+        "LICENSE": true,
+        "**/node_modules": true
     },
     "hide-files.files": [
         "node_modules",

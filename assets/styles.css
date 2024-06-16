@@ -220,3 +220,7 @@ footer {
         animation-duration: 0s;
     }
 }
+
+.eighty-eight {
+    image-rendering: pixelated;
+}
