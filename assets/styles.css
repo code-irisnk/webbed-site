@@ -227,6 +227,8 @@ footer {
 
 .eighty-eight-grid {
     /* ((88x31 width + gap) * max per row) */
+    margin: 1rem;
+    margin-top: 0;
     max-width: min(calc((88px + 4.5px) * 10), 100vw);
     display: grid;
     gap: 7.4px 4.5px;
