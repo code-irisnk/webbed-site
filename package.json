@@ -10,7 +10,7 @@
     "format-html": "find . -name '*.html' ! -path './node_modules/*' ! -path './tumblr-bak/*' ! -name '.*' ! -path '*/.*/*' -exec js-beautify --type html --replace --indent-size 2 --max-preserve-newlines -1 {} +",
     "format-css": "find . -name '*.css' ! -path './node_modules/*' ! -path './tumblr-bak/*' ! -name '.*' ! -path '*/.*/*' -exec js-beautify --type css --replace --indent-size 4 --max-preserve-newlines -1 {} +",
     "format": "npm run format-js && npm run format-html && npm run format-css",
-    "generate-sitemap": "sscli -b https://irisnk.me -r /home/irisnk/webbed-site/",
+    "generate-sitemap": "sscli -b https://irisnk.me -r /home/irisnk/Repos/webbed-site/",
     "deploy": "node deploy.js",
     "build": "npm run generate-sitemap && npm run format"
   },
