@@ -15,6 +15,7 @@
     "build": "npm run generate-sitemap && npm run format"
   },
   "dependencies": {
+    "babel": "^5.8.38",
     "handlebars": "^4.7.8"
   }
 }

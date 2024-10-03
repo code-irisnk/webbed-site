@@ -25,5 +25,6 @@
         ".jsbeautifyrc",
         "package-lock.json",
         "LICENSE"
-    ]
+    ],
+    "svn.ignoreMissingSvnWarning": true
 }
