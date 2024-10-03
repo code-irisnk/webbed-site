@@ -1,7 +1,7 @@
 /* Reset and basic styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e79fff;
+    background-color: #f1c5ff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ header {
     align-items: center;
     padding: 0.75rem;
     /* Adjusted padding */
-    background-color: #d942ff;
+    background-color: #e79fff;
     width: 100%;
     box-sizing: border-box;
 }
@@ -132,7 +132,7 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #d942ff;
+    background-color: #e79fff;
     padding: 0.625rem;
     text-align: center;
     width: 100%;
