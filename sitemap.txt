@@ -1,7 +1,6 @@
 https://irisnk.me/
 https://irisnk.me/blog
 https://irisnk.me/contact
-https://irisnk.me/contributors
 https://irisnk.me/donate
 https://irisnk.me/git
 https://irisnk.me/sitemap
