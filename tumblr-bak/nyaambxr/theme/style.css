@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/google-sans');
+
 body {
     font-family: 'Product Sans', sans-serif;
     font-size: 14px;
@@ -6,7 +8,7 @@ body {
     text-align: left;
     line-height: 160%;
     word-wrap: break-word;
-    letter-spacing: 0.2px;
+    letter-spacing: 1px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -382,7 +384,6 @@ iframe,
 }
 
 .find {
-    background-color: inherit;
     width: calc(100% - 6.75em);
     margin: auto auto auto 2em;
     border: 1px solid #0c0c0d;
@@ -604,7 +605,7 @@ pre {
     font-size: inherit;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
+    white-space: pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
 }
@@ -625,7 +626,7 @@ pre {
 }
 
 p.npf_quirky {
-    font-family: Fairwater;
+    font-family: Fairwater, serif;
     font-size: 1.75em;
 }
 
@@ -844,7 +845,7 @@ p.npf_quote {
     font-weight: bold;
     font-size: 1.5em;
     line-height: 160%;
-    letter-spacing: 0.6px;
+    letter-spacing: 1px;
 }
 
 .quote::before,
@@ -862,8 +863,6 @@ p.npf_quote {
 .quote::after {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
-    -ms-transition: rotate(180deg);
-    -o-transition: rotate(180deg);
     transform: rotate(180deg);
     margin: -0.35em auto auto 0.25em;
     position: absolute;
@@ -927,7 +926,7 @@ p.npf_quote {
 }
 
 p.npf_chat {
-    font-family: 'cascadia code';
+    font-family: 'cascadia code', serif;
     margin-top: 1em;
 }
 
@@ -935,7 +934,7 @@ p.npf_chat b {
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'cascadia code';
+    font-family: 'cascadia code', serif;
     font-size: 0.9em;
 }
 
@@ -1583,6 +1582,7 @@ a.more_notes_link {
     }
 }
 
-@import url('https://fonts.cdnfonts.com/css/google-sans');
-font-family: 'Product Sans',
-sans-serif;
+:root    {
+    font-family: 'Product Sans',
+    sans-serif;
+}
