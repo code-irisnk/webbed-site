@@ -1,7 +1,7 @@
 /* Reset and basic styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f1c5ff;
+    background-color: #f5e1ea;
     color: #333;
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ header {
     align-items: center;
     padding: 0.75rem;
     /* Adjusted padding */
-    background-color: #e79fff;
+    background-color: #ff9eb1;
     width: 100%;
     box-sizing: border-box;
 }
@@ -132,7 +132,7 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #e79fff;
+    background-color: #ff9eb1;
     padding: 0.625rem;
     text-align: center;
     width: 100%;
@@ -255,13 +255,11 @@ footer {
     background: rgb(154, 65, 40);
     background: linear-gradient(215deg,
             rgba(154, 65, 40, 1) 0%,
-            rgba(116, 36, 94, 1) 50%,
-            rgba(59, 56, 132, 1) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    opacity: 0.2974;
-    pointer-events: none;
-}
+            rgba(116, 36, 94, 1) 50%, 2e295a3 background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            opacity: 0.2974;
+            pointer-events: none;
+    }
 
-/* credits: Instagram's Rio De Janeiro filter + Slonk A. Zoid */
+    /* credits: Instagram's Rio De Janeiro filter + Slonk A. Zoid */

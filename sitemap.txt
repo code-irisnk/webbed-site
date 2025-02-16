@@ -9,6 +9,10 @@ https://irisnk.me/ssh
 https://irisnk.me/tumblr-bak/clovergreytime
 https://irisnk.me/tumblr-bak/irisnkrichronos
 https://irisnk.me/tumblr-bak/nyaambxr
+https://irisnk.me/node_modules/defs/build
+https://irisnk.me/node_modules/source-map-support/amd-test
+https://irisnk.me/node_modules/source-map-support/browser-test
+https://irisnk.me/node_modules/source-map-support/header-test
 https://irisnk.me/node_modules/tslib/tslib
 https://irisnk.me/node_modules/tslib/tslib.es6
 https://irisnk.me/node_modules/uglify-js/tools/domprops
