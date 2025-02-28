@@ -1,0 +1,117 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  /* Adjusted padding */
+  background-color: #ff9eb1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Profile Picture */
+#profile-picture {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Header Left */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  display: block;
+  align-items: center;
+  padding: 0 0.75rem;
+  /* Adjusted padding */
+}
+
+nav a {
+  margin-right: 0.625rem;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Text Animation */
+@keyframes wobble {
+  from {
+      position: relative;
+      top: -3px;
+  }
+
+  to {
+      position: relative;
+      top: 3px;
+  }
+}
+
+.wobble {
+  animation-name: wobble;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.wobble1 {
+  animation-delay: 0s;
+}
+
+.wobble2 {
+  animation-delay: -0.2s;
+}
+
+.wobble3 {
+  animation-delay: -0.4s;
+}
+
+.wobble4 {
+  animation-delay: -0.6s;
+}
+
+.wobble5 {
+  animation-delay: -0.8s;
+}
+
+.wobble6 {
+  animation-delay: -1.0s;
+}
+
+.wobble7 {
+  animation-delay: -1.2s;
+}
+
+.wobble8 {
+  animation-delay: -1.4s;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 37.5rem) {
+  #wobble {
+      display: none;
+  }
+
+  .center,
+  .column {
+      width: 100%;
+  }
+}
+
+/* Disable animation if prefers-reduced-motion is set */
+@media (prefers-reduced-motion) {
+  .wobble {
+      animation-duration: 0s;
+  }
+}

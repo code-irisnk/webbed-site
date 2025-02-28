@@ -1,0 +1,99 @@
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5e1ea;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  word-break: break-word;
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered Content */
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.center2 {
+  margin: 0 auto;
+}
+
+/* Sections */
+.section,
+.section-borderless {
+  padding: 1.25rem;
+}
+
+.section {
+  border-bottom: 0.0625rem solid #ccc;
+}
+
+.section-borderless {
+  border: none;
+}
+
+/* Dotted List */
+.dotted-list {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+}
+
+.dotted-list li {
+  margin-bottom: 0.3125rem;
+}
+
+.dotted-list li::before {
+  content: "•";
+  margin-right: 0.3125rem;
+}
+
+/* Last Child Styles */
+.dotted-list li:last-child {
+  margin-bottom: 0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+/* Info */
+.info h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info ul li {
+  margin-bottom: 0.3125rem;
+}
+
+/* Columns */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  box-sizing: border-box;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  width: 50%;
+}

@@ -10,23 +10,6 @@
           "meta[name=theme-color]"
         ]
       }
-    ],
-    "axe/structure": [
-      "default",
-      {
-        "list": "off"
-      }
     ]
-  },
-  "connector": {
-    "name": "local",
-    "options": {
-      "include": [
-        "**/*.html"
-      ],
-      "exclude": [
-        "tumblr-bak/**"
-      ]
-    }
   }
 }
