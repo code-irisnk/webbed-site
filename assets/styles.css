@@ -241,25 +241,3 @@ footer {
     height: 31px;
     image-rendering: pixelated;
 }
-
-/* WARNING: freaky mode */
-:root:has(#freaky:checked)::after {
-    content: "";
-    z-index: 99999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgb(154, 65, 40);
-    background: linear-gradient(215deg,
-            rgba(154, 65, 40, 1) 0%,
-            rgba(116, 36, 94, 1) 50%, 2e295a3 background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-            opacity: 0.2974;
-            pointer-events: none;
-    }
-
-    /* credits: Instagram's Rio De Janeiro filter + Slonk A. Zoid */
