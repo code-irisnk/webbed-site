@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'footer-component',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  commitSha = 'abc123'; // TODO: this used to use handlebars which filled it with the hash at compile time so fix me by reading https://git.elrant.team/irisnk/webbed-site/raw/branch/main/deploy.js
+  commitSha : string = environment.commitSha;
 }

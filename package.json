@@ -2,13 +2,10 @@
   "name": "webbed-site",
   "version": "2.0.0-beta",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:webbed-site": "node dist/webbed-site/server/server.mjs"
+    "start": "ng build && npx serve dist/webbed-site",
+    "build": "ng build --configuration production"
   },
+
   "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
@@ -31,7 +28,7 @@
     "@angular/compiler-cli": "^19.2.0",
     "@types/express": "5.0.0",
     "@types/jasmine": "~5.1.0",
-    "@types/node": "22.13.5",
+    "@types/node": "^22.13.5",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
