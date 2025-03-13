@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'git-page',
+  selector: 'git',
   templateUrl: './git.component.html',
   styleUrls: ['./git.component.scss']
 })

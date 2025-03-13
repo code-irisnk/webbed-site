@@ -6,19 +6,59 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   word-break: break-word;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-/* Main content area */
-main {
+/* Control the main content area */
+.content-area {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 0; /* Prevent minimum height expansion */
+}
+/* Ensure app-root doesn't force unnecessary height */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto; /* Let content determine height */
+}
+/* Header */
+header-component {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer styles */
+footer-component {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+/* Add specific control for the eighty-eight grid */
+.eighty-eight-grid {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+  align-self: center;
+  align-content: center;
+}
+
+eighty-eight {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
 }
 
 /* Centered Content */
@@ -85,10 +125,12 @@ main {
   margin-bottom: 0.3125rem;
 }
 
-/* Columns */
+/* Fix column heights */
 .columns {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  min-height: 0; /* Prevent minimum height expansion */
 }
 
 .column {
@@ -96,4 +138,7 @@ main {
   padding: 1.25rem;
   margin-top: 1rem;
   width: 50%;
+  align-self: flex-start;
+  flex-shrink: 1; /* Allow columns to shrink */
+  height: auto; /* Let content determine height */
 }

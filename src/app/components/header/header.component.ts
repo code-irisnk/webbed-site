@@ -1,8 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'header-component',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  imports: [RouterLink],
+  standalone: true
 })
-export class HeaderComponent { }
+export class HeaderComponent implements OnInit {
+  currentRoute: string = '';
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Subscribe to router events to get current route
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      // Extract the base route without parameters
+      this.currentRoute = event.urlAfterRedirects.split('/')[1] || '';
+    });
+  }
+
+  isCurrentRoute(route: string): boolean {
+    // Convert empty route to 'home' for comparison
+    const normalizedRoute = route === '' ? 'home' : route;
+    const normalizedCurrentRoute = this.currentRoute === '' ? 'home' : this.currentRoute;
+    return normalizedRoute === normalizedCurrentRoute;
+  }
+}
