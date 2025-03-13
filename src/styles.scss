@@ -15,13 +15,6 @@ body {
   padding: 0;
 }
 
-/* Control the main content area */
-.content-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0; /* Prevent minimum height expansion */
-}
 /* Ensure app-root doesn't force unnecessary height */
 app-root {
   display: flex;
@@ -72,17 +65,12 @@ eighty-eight {
 }
 
 /* Sections */
-.section,
-.section-borderless {
+.section {
   padding: 1.25rem;
 }
 
 .section {
   border-bottom: 0.0625rem solid #ccc;
-}
-
-.section-borderless {
-  border: none;
 }
 
 /* Dotted List */

@@ -7,6 +7,5 @@ export const routes: Routes = [
   { path: 'donate', loadComponent: () => import('./pages/donate/donate.component').then(m => m.DonateComponent)},
   { path: 'blog', loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
   { path: 'socials', loadComponent: () => import('./pages/socials/socials.component').then(m => m.SocialsComponent) },
-  { path: 'sitemap', loadComponent: () => import('./pages/sitemap/sitemap.component').then(m => m.SitemapComponent) },
   { path: '**', redirectTo: '' }
 ];
