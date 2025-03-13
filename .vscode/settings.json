@@ -3,27 +3,9 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "node_modules": true,
-        "tumblr-bak": true,
-        ".vscode": true,
-        ".gitignore": true,
-        ".hintrc": true,
-        ".jsbeautifyrc": true,
-        "package-lock.json": true,
-        "LICENSE": true,
-        "**/node_modules": true
+        "**/CVS": true
     },
-    "hide-files.files": [
-        "node_modules",
-        "tumblr-bak",
-        ".vscode",
-        ".gitignore",
-        ".hintrc",
-        ".jsbeautifyrc",
-        "package-lock.json",
-        "LICENSE"
-    ]
+    "hide-files.files": []
 }

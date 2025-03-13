@@ -1,0 +1,15 @@
+.eighty-eight-grid {
+  /* ((88x31 width + gap) * max per row) */
+  margin: 0 1rem 1rem;
+  max-width: min(calc((88px + 4.5px) * 10), 100vw);
+  display: grid;
+  gap: 7.4px 4.5px;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+}
+
+.eighty-eight {
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
+}

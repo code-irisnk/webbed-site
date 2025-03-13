@@ -1,3 +1,6 @@
-# webbed site
+# webbed site v2
+Now in Angular! (AKA: now needs JavaScript on the client to work)
 
-<https://irisnk.me/>
+[Currently deployed!!!](https://irisnk.me/)
+
+The `NODE_VERSION` environment variable needs to be 22 or higher for the Cloudflare Pages deployment

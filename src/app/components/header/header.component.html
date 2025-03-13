@@ -1,0 +1,23 @@
+<header>
+  <div class="header-left">
+    <img id="profile-picture" src="favicon/android-chrome-512x512.png" alt="Profile Picture" />
+    <h1 id="wobble" aria-label="Iris">
+      <span class="wobble wobble1">I</span><span class="wobble wobble2">r</span>
+      <span class="wobble wobble3">i</span><span class="wobble wobble4">s</span>
+    </h1>
+  </div>
+  <nav class="menu">
+    <a [routerLink]="['git']" [class.active]="isCurrentRoute('git')"
+      [attr.tabindex]="isCurrentRoute('git') ? '-1' : null">Git</a>
+    <a [routerLink]="['contact']" [class.active]="isCurrentRoute('contact')"
+      [attr.tabindex]="isCurrentRoute('contact') ? '-1' : null">Contact</a>
+    <a [routerLink]="['donate']" [class.active]="isCurrentRoute('donate')"
+      [attr.tabindex]="isCurrentRoute('donate') ? '-1' : null">Donate</a>
+    <a [routerLink]="['socials']" [class.active]="isCurrentRoute('socials')"
+      [attr.tabindex]="isCurrentRoute('socials') ? '-1' : null">Socials</a>
+    <a [routerLink]="['blog']" [class.active]="isCurrentRoute('blog')"
+      [attr.tabindex]="isCurrentRoute('blog') ? '-1' : null">Blog</a>
+    <a [routerLink]="['']" [class.active]="isCurrentRoute('')"
+      [attr.tabindex]="isCurrentRoute('') ? '-1' : null">Home</a>
+  </nav>
+</header>
