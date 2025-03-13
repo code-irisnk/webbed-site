@@ -3,7 +3,8 @@
   "version": "2.0.0-beta",
   "scripts": {
     "start": "ng build && npx serve dist/webbed-site",
-    "build": "ng build --configuration production"
+    "build": "ng build --configuration production",
+    "deploy": "tsc deploy.ts && node deploy.js"
   },
 
   "private": true,
