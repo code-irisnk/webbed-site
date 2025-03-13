@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
 import { promises as fs } from 'fs';
-import path from 'path';
+import * as path from 'path';
 
 // Get the current commit SHA
 const commitSha: string = execSync('git rev-parse --short HEAD').toString().trim();
