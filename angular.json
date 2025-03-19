@@ -134,7 +134,7 @@
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "routes": ["/"],
+            "routes": ["/", "git", "contact", "donate", "blog", "socials", "ssh"],
             "browserTarget": "webbed-site:build:production",
             "serverTarget": "webbed-site:server:production"
           },
