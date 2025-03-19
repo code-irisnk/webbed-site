@@ -78,32 +78,12 @@ nav a {
   animation-delay: -0.6s;
 }
 
-.wobble5 {
-  animation-delay: -0.8s;
-}
-
-.wobble6 {
-  animation-delay: -1.0s;
-}
-
-.wobble7 {
-  animation-delay: -1.2s;
-}
-
-.wobble8 {
-  animation-delay: -1.4s;
-}
-
 /* Media Query for Small Screens */
 @media (max-width: 37.5rem) {
   #wobble {
       display: none;
   }
 
-  .center,
-  .column {
-      width: 100%;
-  }
 }
 
 /* Disable animation if prefers-reduced-motion is set */

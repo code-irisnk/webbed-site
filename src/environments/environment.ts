@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  commitSha: 'DEV' // This will be replaced at build time by deploy.js
+  commitSha: 'DEV' // Deploy.js will replace this at build time
 };

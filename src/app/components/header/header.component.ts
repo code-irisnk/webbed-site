@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'header-component',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   standalone: true
 })
 export class HeaderComponent implements OnInit {
@@ -15,7 +16,7 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Subscribe to router events to get current route
+    // Subscribe to router events to get the current route
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -25,7 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   isCurrentRoute(route: string): boolean {
-    // Convert empty route to 'home' for comparison
+    // Convert an empty route 'home' for comparison
     const normalizedRoute = route === '' ? 'home' : route;
     const normalizedCurrentRoute = this.currentRoute === '' ? 'home' : this.currentRoute;
     return normalizedRoute === normalizedCurrentRoute;
