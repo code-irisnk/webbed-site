@@ -1,4 +1,11 @@
 /* Reset and basic styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5e1ea;
@@ -6,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  font-size: clamp(1rem, 2vw, 1rem);
   word-break: break-word;
 }
 html,
@@ -22,6 +30,7 @@ app-root {
   min-height: 100vh;
   height: auto; /* Let content determine height */
 }
+
 /* Header */
 header-component {
   display: flex;
@@ -66,7 +75,7 @@ eighty-eight {
 
 /* Sections */
 .section {
-  padding: 1.25rem;
+  padding: min(5vw, 2rem);
 }
 
 .section {
@@ -129,4 +138,16 @@ eighty-eight {
   align-self: flex-start;
   flex-shrink: 1; /* Allow columns to shrink */
   height: auto; /* Let content determine height */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 37.5rem) {
+  #wobble {
+    display: none;
+  }
+
+  .center,
+  .column {
+    width: 100%;
+  }
 }
