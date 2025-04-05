@@ -8,6 +8,15 @@
       <span class="wobble wobble4">s</span>
     </h1>
   </div>
+
+  <!-- Hamburger and toggle -->
+  <input type="checkbox" id="menu-toggle" />
+  <label class="hamburger" for="menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
   <nav class="menu">
     <a [routerLink]="['git']"     [class.active]="isCurrentRoute('git')"     [attr.tabindex]="isCurrentRoute('git') ? '-1' : null">Git</a>
     <a [routerLink]="['contact']" [class.active]="isCurrentRoute('contact')" [attr.tabindex]="isCurrentRoute('contact') ? '-1' : null">Contact</a>

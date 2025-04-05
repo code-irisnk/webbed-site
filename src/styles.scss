@@ -140,11 +140,7 @@ eighty-eight {
   height: auto; /* Let content determine height */
 }
 
-/* Media Query for Small Screens */
 @media (max-width: 37.5rem) {
-  #wobble {
-    display: none;
-  }
 
   .center,
   .column {
