@@ -63,19 +63,16 @@ eighty-eight {
   display: flex;
 }
 
-/* Centered Content */
-.center {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.center2 {
-  margin: 0 auto;
-}
 
 /* Sections */
+section {
+  margin-left: auto;
+  marign-right: auto;
+}
+
 .section {
   padding: min(5vw, 2rem);
+
 }
 
 .section {
@@ -84,7 +81,7 @@ eighty-eight {
 
 /* Dotted List */
 .dotted-list {
-  list-style-type: disc;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -108,9 +105,15 @@ eighty-eight {
 }
 
 /* Info */
+
+.info {
+ 
+}
+
 .info h2 {
   color: #333;
   margin-top: 0;
+  text-align: center;
 }
 
 .info ul {
@@ -125,19 +128,33 @@ eighty-eight {
 /* Fix column heights */
 .columns {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
   min-height: 0; /* Prevent minimum height expansion */
+   width:100vw;
 }
 
 .column {
   box-sizing: border-box;
   padding: 1.25rem;
   margin-top: 1rem;
-  width: 50%;
+  width: 42ch;
   align-self: flex-start;
+  margin: 2em;
   flex-shrink: 1; /* Allow columns to shrink */
   height: auto; /* Let content determine height */
+}
+
+
+/* Centered Content */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center2 {
+  margin: 0 auto;
 }
 
 @media (max-width: 37.5rem) {
