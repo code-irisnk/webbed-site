@@ -1,0 +1,26 @@
+<div class="column center info">
+    <h2>Support me!</h2>
+    <p>If you enjoy my content and would like to support my work, you can make a donation using one of the following methods.</p>
+    <p>Also, if donating through crypto <a href="mailto:self@irisnk.me">email me</a> first!</p>
+  <section class="columns">
+    <div class="column column-left">
+      <h3>Conventional donation methods:</h3>
+      <ul class="dotted-list">
+        <li>Ko-fi: <a href="https://ko-fi.com/nyaambxr">Donate Now</a>, it has fees, but it's fast!</li>
+        <li>LiberaPay: <a href="https://liberapay.com/irisnk/">Donate Now</a>, it's non-profit!</li>
+        <li>Bandcamp: <a href="https://nyaambxr.bandcamp.com/">Donate Now</a> and get Music!</li>
+      </ul>
+    </div>
+    <div class="column column-right">
+      <h3>Cryptos:</h3>
+      <ul class="dotted-list">
+        <li *ngFor="let crypto of cryptoAddresses">
+          {{ crypto.coin }}:
+          <button (click)="copyToClipboard(crypto.address, crypto.coin)" class="copy-button" type="button">
+            {{ copiedCoin === crypto.coin ? 'Copied!' : 'Click to copy' }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

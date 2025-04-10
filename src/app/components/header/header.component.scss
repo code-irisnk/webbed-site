@@ -1,0 +1,171 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  /* Adjusted padding */
+  background-color: #ff9eb1;
+  width: 100%;
+  box-sizing: border-box;
+  word-break: keep-all;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Profile Picture */
+#profile-picture {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Header Left */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  display: block;
+  align-items: center;
+  padding: 0 0.75rem;
+  /* Adjusted padding */
+}
+
+nav a {
+  margin-right: 0.625rem;
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+/* Text Animation */
+@keyframes wobble {
+  0% {
+    transform: translateY(-3px);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+.wobble {
+  display: inline-block;
+  animation: wobble 4s ease-in-out infinite;
+}
+
+.wobble1 {
+  animation-delay: 0s;
+}
+
+.wobble2 {
+  animation-delay: -0.2s;
+}
+
+.wobble3 {
+  animation-delay: -0.4s;
+}
+
+.wobble4 {
+  animation-delay: -0.6s;
+}
+
+/* Disable animation if prefers-reduced-motion is set */
+@media (prefers-reduced-motion) {
+  .wobble {
+      animation-duration: 0s;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &.active {
+      font-weight: bold;
+      color: #000;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+      }
+    }
+  }
+}
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 2rem;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 37.5rem) {
+  .menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background-color: #ffc0cd;
+    width: max-content;
+    min-width: 10rem;
+    padding: 1rem 0.75rem;
+    display: none;
+    z-index: 1000;
+    margin-left: auto;
+    align-items: flex-end;
+  }
+
+  .menu a {
+    padding: 0.5rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+}
