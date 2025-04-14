@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.6",
-    "@angular/cli": "^19.2.6",
+    "@angular/cli": "^19.2.7",
     "@angular/compiler-cli": "^19.2.5",
     "@types/browser-sync": "2.29.0",
     "@types/express": "^5.0.1",
