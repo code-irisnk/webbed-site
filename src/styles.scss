@@ -63,16 +63,14 @@ eighty-eight {
   display: flex;
 }
 
-
 /* Sections */
 section {
   margin-left: auto;
-  marign-right: auto;
+  margin-right: auto;
 }
 
 .section {
   padding: min(5vw, 2rem);
-
 }
 
 .section {
@@ -104,12 +102,6 @@ section {
   border-bottom: none;
 }
 
-/* Info */
-
-.info {
-
-}
-
 .info h2 {
   color: #333;
   margin-top: 0;
@@ -132,20 +124,18 @@ section {
   flex-direction: row;
   justify-content: space-evenly;
   min-height: 0; /* Prevent minimum height expansion */
-  width:100vw;
+  width: 100vw;
 }
 
 .column {
   box-sizing: border-box;
   padding: 1.25rem;
-  margin-top: 1rem;
   width: 42ch;
   align-self: flex-start;
   margin: 2em;
   flex-shrink: 1; /* Allow columns to shrink */
   height: auto; /* Let content determine height */
 }
-
 
 /* Centered Content */
 .center {
@@ -158,7 +148,6 @@ section {
 }
 
 @media (max-width: 37.5rem) {
-
   .center,
   .column {
     width: 100%;
