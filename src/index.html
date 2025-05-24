@@ -9,6 +9,8 @@
   <title>Iris</title>
   <meta name="description" content="The personal website of Iris! Indie artist, dev, and soul. Come explore." />
   <meta name="author" content="Iris" />
+  <meta name="keywords" content="indie artist, developer, personal website, web revival, digital art" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Iris" />
@@ -36,8 +38,29 @@
   <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
   <meta name="theme-color" content="#FF9EB1" />
 
+  <!-- Performance Optimizations -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://irisnk.me" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Iris",
+    "url": "https://irisnk.me",
+    "sameAs": [
+      "https://github.com/code-irisnk",
+      "https://twitter.com/nkrichronos"
+    ],
+    "description": "Indie artist, dev, and soul",
+    "jobTitle": "Developer & Artist",
+    "image": "https://irisnk.me/index/pfp.png"
+  }
+  </script>
 
   <base href="/" />
 </head>
@@ -46,4 +69,3 @@
   <app-root></app-root>
 </body>
 </html>
-
