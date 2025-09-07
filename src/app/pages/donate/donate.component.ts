@@ -10,10 +10,6 @@ import { Component } from '@angular/core';
 export class DonateComponent {
   cryptoAddresses = [
     {
-      coin: "XMR",
-      address: "42H8mUpyYvcaiFKD61uKHReQ9KvqPp1yB3HAYNfoi5aHJsZb2viBV3KdP3kc67GjNB4bE1QTHZEUaiTzv7Qspjkc2GgeSKV"
-    },
-    {
       coin: "ETH",
       address: "0x714fD48B751C83C5b19EC1a13d317AADd22C738c"
     },
