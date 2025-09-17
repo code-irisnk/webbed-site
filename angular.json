@@ -14,6 +14,15 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "prerender": {
+          "builder": "@angular/build:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ],
+            "browserTarget": "webbed-site:build:production"
+          }
+        },
         "build": {
           "builder": "@angular/build:application",
           "options": {
