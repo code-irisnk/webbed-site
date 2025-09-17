@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "prerender": {
-          "builder": "@angular/build:prerender",
+          "builder": "@angular/ssr:prerender",
           "options": {
             "routes": [
               "/"
