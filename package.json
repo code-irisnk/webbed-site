@@ -2,10 +2,9 @@
   "name": "webbed-site",
   "version": "2.0.1-ssg",
   "scripts": {
+    "build": "ng build --configuration production",
     "dev": "ng serve --configuration development",
-    "build": "ng run webbed-site:prerender",
-    "deploy": "tsc deploy.ts && node deploy.js",
-    "serve:ssr:webbed-site": "node dist/webbed-site/server/server.mjs"
+    "deploy": "tsc deploy.ts && node deploy.js"
   },
   "private": true,
   "dependencies": {
