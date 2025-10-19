@@ -1,5 +1,6 @@
+// app.config.ts
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, withInMemoryScrolling, withPreloading, PreloadAllModules } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withPreloading, PreloadAllModules, withViewTransitions } from '@angular/router';
 import { provideClientHydration, withEventReplay, withNoHttpTransferCache } from '@angular/platform-browser';
 import { IMAGE_CONFIG } from '@angular/common';
 
@@ -13,19 +14,21 @@ export const appConfig: ApplicationConfig = {
       withPreloading(PreloadAllModules),
       withInMemoryScrolling({
         scrollPositionRestoration: 'top',
-        anchorScrolling: 'enabled'
-      })
+        anchorScrolling: 'enabled',
+      }),
+      withViewTransitions()
     ),
     provideClientHydration(
       withEventReplay(),
       withNoHttpTransferCache()
     ),
+
     {
       provide: IMAGE_CONFIG,
       useValue: {
         disableImageSizeWarning: false,
-        disableImageLazyLoadWarning: false
-      }
-    }
-  ]
+        disableImageLazyLoadWarning: false,
+      },
+    },
+  ],
 };

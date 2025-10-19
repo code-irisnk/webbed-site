@@ -6,10 +6,16 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
+html,
+body,
+app-root {
   background-color: #f5e1ea;
   color: #333;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -152,4 +158,33 @@ section {
   .column {
     width: 100%;
   }
+}
+
+
+
+
+/* Optional: element morphing */
+img[style*="view-transition-name"] {
+  view-transition-name: logo;
+}
+header-component,
+footer-component {
+  view-transition-name: none;
+  contain: paint;
+}
+
+router-outlet {
+  view-transition-name: page;
+}
+
+::view-transition-old(page),
+::view-transition-new(page) {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-name: fade;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
