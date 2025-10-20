@@ -90,7 +90,7 @@ nav a {
 }
 
 .menu {
-    view-transition-name: none;
+  view-transition-name: none;
   display: flex;
   gap: 1rem;
 
@@ -167,6 +167,7 @@ nav a {
     display: flex;
   }
 }
+
 .menu a {
   text-decoration: none;
   color: #333;
@@ -197,4 +198,8 @@ nav a {
 
 .menu a.active::after {
   width: 100%;
+}
+
+nav {
+  view-transition-name: none;
 }
