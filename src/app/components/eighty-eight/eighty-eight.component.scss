@@ -1,27 +1,32 @@
 .eighty-eight-grid {
-    /* ((88x31 width + gap) * max per row) */
-    margin: 0 auto 2rem;
-    padding: 0.5rem;
-    max-width: min(calc((88px + 4.5px) * 10), 100vw);
-    display: grid;
-    gap: clamp(4px, 2vw, 7.4px) clamp(2px, 1.5vw, 4.5px);
-    grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
-    box-sizing: border-box;
+  /* ((88x31 width + gap) * max per row) */
+  margin: 0;
+  padding: 0.5rem;
+  max-width: min(calc((88px + 4.5px) * 10), 100vw);
+  display: grid;
+  gap: clamp(4px, 2vw, 7.4px) clamp(2px, 1.5vw, 4.5px);
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1rem;
 }
 
 .eighty-eight {
-    margin-top: 0;
-
-    width: clamp(50px, 10vw, 88px);
-    height: clamp(18px, 3.5vw, 31px);
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: pixelated;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0; // reset so it looks good in grid
+  width: 88px;
+  height: 31px;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .eighty-eight:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+}
+
+.eighty-eight:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
