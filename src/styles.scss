@@ -3,178 +3,178 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body,
 app-root {
-  background-color: #f5e1ea;
-  color: #333;
+    background-color: #f5e1ea;
+    color: #333;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-size: clamp(1rem, 2vw, 1rem);
-  word-break: break-word;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: clamp(1rem, 2vw, 1rem);
+    word-break: break-word;
 }
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Ensure app-root doesn't force unnecessary height */
 app-root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  height: auto; /* Let content determine height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto; /* Let content determine height */
 }
 
 /* Header */
 app-header-component {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Footer styles */
 app-footer-component {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: auto;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
 }
 
 /* Add specific control for the eighty-eight grid */
 .eighty-eight-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 0;
-  padding-top: 0;
-  align-self: center;
-  align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+    align-self: center;
+    align-content: center;
 }
 
 app-eighty-eight {
-  margin-top: 0;
-  padding-top: 0;
-  display: flex;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
 }
 
 /* Sections */
 section {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section {
-  padding: min(5vw, 2rem);
+    padding: min(5vw, 2rem);
 }
 
 .section {
-  border-bottom: 0.0625rem solid #ccc;
+    border-bottom: 0.0625rem solid #ccc;
 }
 
 /* Dotted List */
 .dotted-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .dotted-list li {
-  margin-bottom: 0.3125rem;
+    margin-bottom: 0.3125rem;
 }
 
 .dotted-list li::before {
-  content: "•";
-  margin-right: 0.3125rem;
+    content: '•';
+    margin-right: 0.3125rem;
 }
 
 /* Last Child Styles */
 .dotted-list li:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .section:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .info h2 {
-  color: #333;
-  margin-top: 0;
-  text-align: center;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
 }
 
 .info ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .info ul li {
-  margin-bottom: 0.3125rem;
+    margin-bottom: 0.3125rem;
 }
 
 /* Fix column heights */
 .columns {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  min-height: 0; /* Prevent minimum height expansion */
-  width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 0; /* Prevent minimum height expansion */
+    width: 100vw;
 }
 
 .column {
-  box-sizing: border-box;
-  padding: 1.25rem;
-  width: 42ch;
-  align-self: flex-start;
-  margin: 2em;
-  flex-shrink: 1; /* Allow columns to shrink */
-  height: auto; /* Let content determine height */
+    box-sizing: border-box;
+    padding: 1.25rem;
+    width: 42ch;
+    align-self: flex-start;
+    margin: 2em;
+    flex-shrink: 1; /* Allow columns to shrink */
+    height: auto; /* Let content determine height */
 }
 
 /* Centered Content */
 .center {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .center2 {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 @media (max-width: 37.5rem) {
-  .center,
-  .column {
-    width: 100%;
-  }
+    .center,
+    .column {
+        width: 100%;
+    }
 }
 
 router-outlet {
-  view-transition-name: page;
+    view-transition-name: page;
 }
 
 ::view-transition-old(page),
 ::view-transition-new(page) {
-  animation-duration: 0.4s;
-  animation-timing-function: ease-in-out;
-  animation-name: fade;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-name: fade;
 }
 
 @keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
