@@ -38,7 +38,7 @@
     "@types/karma-coverage": "~2.0.3",
     "@types/karma-jasmine": "~4.0.5",
     "@types/karma-jasmine-html-reporter": "~1.7.3",
-    "@types/node": "^24.9.0",
+    "@types/node": "^24.9.1",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "angular-eslint": "^20.4.0",
@@ -55,7 +55,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.2"
   },
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.19.0+sha512.c9fc7236e92adf5c8af42fd5bf1612df99c2ceb62f27047032f4720b33f8eacdde311865e91c411f2774f618d82f320808ecb51718bfa82c060c4ba7c76a32b8",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
