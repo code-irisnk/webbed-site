@@ -7,7 +7,8 @@
     "deploy": "tsc deploy.ts && node deploy.js",
     "format:ts": "eslint --ext .ts,.tsx,.js,.jsx,.html --fix .",
     "format:css": "prettier --write '**/*.{css,scss,html,ts}'",
-    "format": "pnpm run format:ts && pnpm run format:css"
+    "format": "pnpm run format:ts && pnpm run format:css",
+    "serve:ssr:webbed-site": "node dist/webbed-site/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -31,14 +32,14 @@
     "@angular/compiler-cli": "^20.3.6",
     "@eslint/js": "^9.38.0",
     "@types/browser-sync": "2.29.0",
-    "@types/express": "^5.0.3",
+    "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.12",
     "@types/karma": "~6.3.9",
     "@types/karma-chrome-launcher": "~3.1.4",
     "@types/karma-coverage": "~2.0.3",
     "@types/karma-jasmine": "~4.0.5",
     "@types/karma-jasmine-html-reporter": "~1.7.3",
-    "@types/node": "^24.9.1",
+    "@types/node": "^20.17.19",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "angular-eslint": "^20.4.0",

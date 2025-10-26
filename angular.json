@@ -38,7 +38,9 @@
             ],
             "scripts": [],
             "browser": "src/main.ts",
-            "outputMode": "static"
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": false
           },
           "configurations": {
             "production": {
@@ -109,7 +111,8 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "packageManager": "pnpm"
   },
   "schematics": {
     "@schematics/angular:component": {

@@ -7,11 +7,7 @@ import {
     PreloadAllModules,
     withViewTransitions,
 } from '@angular/router';
-import {
-    provideClientHydration,
-    withEventReplay,
-    withNoHttpTransferCache,
-} from '@angular/platform-browser';
+
 import { IMAGE_CONFIG } from '@angular/common';
 
 import { routes } from './app.routes';
@@ -28,7 +24,6 @@ export const appConfig: ApplicationConfig = {
             }),
             withViewTransitions(),
         ),
-        provideClientHydration(withEventReplay(), withNoHttpTransferCache()),
 
         {
             provide: IMAGE_CONFIG,
