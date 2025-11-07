@@ -10,11 +10,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* Catppuccin Mocha Color Variables */
+:root {
+    --ctp-base: #1e1e2e;
+    --ctp-mantle: #181825;
+    --ctp-crust: #11111b;
+    --ctp-surface0: #313244;
+    --ctp-surface1: #45475a;
+    --ctp-surface2: #585b70;
+    --ctp-text: #cdd6f4;
+    --ctp-subtext1: #bac2de;
+    --ctp-subtext0: #a6adc8;
+    --ctp-mauve: #cba6f7;
+    --ctp-mauve-dim: #b4a5dc;
+}
+
 html,
 body,
 app-root {
-    background-color: #f5e1ea;
-    color: #333;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
 }
 
 body {
@@ -29,6 +44,7 @@ body {
 h1,
 h2 {
     font-family: Cabin, sans-serif;
+    color: var(--ctp-mauve);
 }
 
 html,
@@ -38,12 +54,26 @@ body {
     padding: 0;
 }
 
+/* Links */
+a {
+    color: var(--ctp-mauve);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--ctp-mauve-dim);
+}
+
+a:visited {
+    color: #ddb6f2;
+}
+
 /* Ensure app-root doesn't force unnecessary height */
 app-root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    height: auto; /* Let content determine height */
+    height: auto;
 }
 
 /* Header */
@@ -89,7 +119,7 @@ section {
 }
 
 .section {
-    border-bottom: 0.0625rem solid #ccc;
+    border-bottom: 0.0625rem solid var(--ctp-surface1);
 }
 
 /* Dotted List */
@@ -105,6 +135,7 @@ section {
 
 .dotted-list li::before {
     content: '•';
+    color: var(--ctp-mauve);
     margin-right: 0.3125rem;
 }
 
@@ -118,7 +149,7 @@ section {
 }
 
 .info h2 {
-    color: #333;
+    color: var(--ctp-mauve);
     margin-top: 0;
     text-align: center;
 }
@@ -138,7 +169,7 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    min-height: 0; /* Prevent minimum height expansion */
+    min-height: 0;
     width: 100vw;
 }
 
@@ -148,8 +179,8 @@ section {
     width: 42ch;
     align-self: flex-start;
     margin: 2em;
-    flex-shrink: 1; /* Allow columns to shrink */
-    height: auto; /* Let content determine height */
+    flex-shrink: 1;
+    height: auto;
 }
 
 /* Centered Content */

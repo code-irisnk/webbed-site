@@ -1,13 +1,24 @@
 /* Footer */
 footer {
-    background-color: #ff9eb1;
+    background-color: var(--ctp-mantle);
+    border-top: 1px solid var(--ctp-surface0);
     padding: 0.625rem;
     text-align: center;
     width: 100%;
     margin-top: auto;
     box-sizing: border-box;
+    color: var(--ctp-subtext1);
+}
+
+footer a {
+    color: var(--ctp-mauve);
+}
+
+footer a:hover {
+    color: var(--ctp-mauve-dim);
 }
 
 .shasum {
     font-family: 'Jetbrains Mono', monospace;
+    color: var(--ctp-mauve);
 }

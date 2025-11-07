@@ -1,5 +1,4 @@
 .eighty-eight-grid {
-    /* ((88x31 width + gap) * max per row) */
     margin: 0;
     padding: 0.5rem;
     max-width: min(calc((88px + 4.5px) * 10), 100vw);
@@ -14,19 +13,22 @@
 }
 
 .eighty-eight {
-    margin: 0; // reset so it looks good in grid
+    margin: 0;
     width: 88px;
     height: 31px;
     image-rendering: auto;
     image-rendering: crisp-edges;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: pixelated;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--ctp-surface0);
 }
+
 .eighty-eight:hover {
-    box-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px var(--ctp-mauve);
+    border-color: var(--ctp-mauve);
 }
 
 .eighty-eight:active {
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
