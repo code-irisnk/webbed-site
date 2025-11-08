@@ -3,7 +3,7 @@
         <div class="eighty-eight-grid">
             @for (badge of badges; track badge) {
                 <a class="eighty-eight" [href]="badge.href || null">
-                    <img [ngSrc]="badge.src" width="88" height="31" [alt]="badge.alt" priority />
+                    <img [ngSrc]="badge.src" width="88" height="31" [alt]="badge.alt" />
                 </a>
             }
         </div>
