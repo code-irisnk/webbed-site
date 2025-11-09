@@ -1,25 +1,24 @@
 <section class="info center column">
-  <h2>My SSH keys</h2>
-  <p>For all your "Iris please fix" needs!</p>
-  <p><em>(I promise I won't change your root password >.<)</em></p>
+    <h2>My SSH keys</h2>
+    <p>For all your "Iris please fix" needs!</p>
+    <p><em>(I promise I won't format your root partition >.<)</em></p>
 
-<ul class="dotted-list">
-  @for (key of sshKeys; track key) {
-    <li class="key-item">
-      <div class="key-content">
-        <div class="label">
-          <strong>{{ key.name }}:</strong>
-        </div>
-        <button
-          (click)="copyToClipboard(key.key, key.name)"
-          class="copy-button"
-          type="button"
-        >
-          {{ copiedKey === key.name ? 'Copied!' : 'Copy SSH key' }}
-        </button>
-      </div>
-    </li>
-  }
-</ul>
-
+    <ul class="dotted-list">
+        @for (key of sshKeys; track key) {
+            <li class="key-item">
+                <div class="key-content">
+                    <div class="label">
+                        <strong>{{ key.name }}:</strong>
+                    </div>
+                    <button
+                        (click)="copyToClipboard(key.key, key.name)"
+                        class="copy-button"
+                        type="button"
+                    >
+                        {{ copiedKey === key.name ? 'Copied!' : 'Copy SSH key' }}
+                    </button>
+                </div>
+            </li>
+        }
+    </ul>
 </section>

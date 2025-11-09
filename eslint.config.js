@@ -5,7 +5,7 @@ const angular = require('angular-eslint');
 
 module.exports = tseslint.config(
     {
-        ignores: ['src/app/assets/tumblr-bak/**', 'dist/**', 'node_modules/**'],
+        ignores: ['src/app/assets/tumblr-bak/**', 'dist/**', 'node_modules/**', '.angular'],
     },
     {
         files: ['**/*.ts'],

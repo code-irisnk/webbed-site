@@ -21,10 +21,7 @@ async function updateEnvironmentFiles(): Promise<void> {
             let envContent: string = await fs.readFile(envPath, 'utf8');
 
             // Update or insert commitSha
-            envContent = envContent.replace(
-                /commitSha:\s*'.*'/,
-                `commitSha: '${commitShaShort}'`,
-            );
+            envContent = envContent.replace(/commitSha:\s*'.*'/, `commitSha: '${commitShaShort}'`);
 
             // If commitShaFull exists, replace it; otherwise, add it
             if (envContent.match(/commitShaFull:\s*'.*'/)) {
