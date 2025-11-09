@@ -1,28 +1,28 @@
 li {
-    font-family: 'Jetbrains Mono', monospace;
+  font-family: 'Jetbrains Mono', monospace;
 }
 .key-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .label {
-    text-align: left;
+  text-align: left;
 }
 
 .copy-button {
-    text-align: right;
+  text-align: right;
 }
 .key-item {
-    position: relative;
-    padding-left: 1.2em; /* adjust to match dot size */
+  position: relative;
+  padding-left: 1.2em; /* adjust to match dot size */
 }
 
 .key-item::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

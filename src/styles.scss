@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Catppuccin Mocha Color Variables */
 :root {
@@ -134,7 +134,7 @@ section {
 }
 
 .dotted-list li::before {
-  content: "•";
+  content: '•';
   color: var(--ctp-mauve);
   margin-right: 0.3125rem;
 }
@@ -257,4 +257,3 @@ router-outlet {
   cursor: not-allowed;
   color: var(--ctp-subtext0);
 }
-

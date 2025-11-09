@@ -1,11 +1,11 @@
 // app.config.ts
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import {
-    provideRouter,
-    withInMemoryScrolling,
-    withPreloading,
-    PreloadAllModules,
-    withViewTransitions,
+  provideRouter,
+  withInMemoryScrolling,
+  withPreloading,
+  PreloadAllModules,
+  withViewTransitions,
 } from '@angular/router';
 
 import { IMAGE_CONFIG } from '@angular/common';
@@ -13,24 +13,24 @@ import { IMAGE_CONFIG } from '@angular/common';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-    providers: [
-        provideZoneChangeDetection({ eventCoalescing: true }),
-        provideRouter(
-            routes,
-            withPreloading(PreloadAllModules),
-            withInMemoryScrolling({
-                scrollPositionRestoration: 'top',
-                anchorScrolling: 'enabled',
-            }),
-            withViewTransitions(),
-        ),
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(
+      routes,
+      withPreloading(PreloadAllModules),
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled',
+      }),
+      withViewTransitions(),
+    ),
 
-        {
-            provide: IMAGE_CONFIG,
-            useValue: {
-                disableImageSizeWarning: false,
-                disableImageLazyLoadWarning: false,
-            },
-        },
-    ],
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: false,
+        disableImageLazyLoadWarning: false,
+      },
+    },
+  ],
 };
