@@ -39,6 +39,12 @@
             >Contact</a
         >
         <a
+            [routerLink]="['ssh']"
+            [class.active]="isCurrentRoute('ssh')"
+            [attr.tabindex]="isCurrentRoute('ssh') ? '-1' : null"
+            >SSH Keys</a
+        >
+        <a
             [routerLink]="['donate']"
             [class.active]="isCurrentRoute('donate')"
             [attr.tabindex]="isCurrentRoute('donate') ? '-1' : null"
