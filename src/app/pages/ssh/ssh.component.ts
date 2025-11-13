@@ -9,7 +9,7 @@ export class SshComponent {
   sshKeys = [
     {
       name: 'ruthenium',
-      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEobdwiNw95e/JdgyGbWCqxNBU0uBFchjt5T+3P0LBhN',
+      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGGMUu6ji793lCGuzl78QsgwbqVL1feGgi3catBmPBTZ',
       comment: 'irisnk@ruthenium',
     },
     {
