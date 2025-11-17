@@ -33,7 +33,7 @@
     "@eslint/js": "^9.39.1",
     "@types/browser-sync": "2.29.1",
     "@types/express": "^5.0.5",
-    "@types/jasmine": "~5.1.12",
+    "@types/jasmine": "~5.1.13",
     "@types/karma": "~6.3.9",
     "@types/karma-chrome-launcher": "~3.1.4",
     "@types/karma-coverage": "~2.0.3",
