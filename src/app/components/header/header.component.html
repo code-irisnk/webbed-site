@@ -27,41 +27,45 @@
   <nav class="menu">
     <a
       [routerLink]="['git']"
-      [class.active]="isCurrentRoute('git')"
-      [attr.tabindex]="isCurrentRoute('git') ? '-1' : null">
+      routerLinkActive="active"
+      [attr.tabindex]="null">
       Git
     </a>
     <a
       [routerLink]="['contact']"
-      [class.active]="isCurrentRoute('contact')"
-      [attr.tabindex]="isCurrentRoute('contact') ? '-1' : null">
+      routerLinkActive="active"
+      [attr.tabindex]="null">
       Contact
     </a>
     <a
       [routerLink]="['ssh']"
-      [class.active]="isCurrentRoute('ssh')"
-      [attr.tabindex]="isCurrentRoute('ssh') ? '-1' : null">
+      routerLinkActive="active"
+      [attr.tabindex]="null">
       SSH
     </a>
     <a
       [routerLink]="['donate']"
-      [class.active]="isCurrentRoute('donate')"
-      [attr.tabindex]="isCurrentRoute('donate') ? '-1' : null">
+      routerLinkActive="active"
+      [attr.tabindex]="null">
       Donate
     </a>
     <a
       [routerLink]="['socials']"
-      [class.active]="isCurrentRoute('socials')"
-      [attr.tabindex]="isCurrentRoute('socials') ? '-1' : null">
+      routerLinkActive="active"
+      [attr.tabindex]="null">
       Socials
     </a>
     <a
       [routerLink]="['blog']"
-      [class.active]="isCurrentRoute('blog')"
-      [attr.tabindex]="isCurrentRoute('blog') ? '-1' : null">
+      routerLinkActive="active"
+      [attr.tabindex]="null">
       Blog
     </a>
-    <a [routerLink]="['']" [class.active]="isCurrentRoute('')" [attr.tabindex]="isCurrentRoute('') ? '-1' : null">
+    <a
+      [routerLink]="['']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [attr.tabindex]="null">
       Home
     </a>
   </nav>

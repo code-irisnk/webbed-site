@@ -3,9 +3,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
   background-color: var(--ctp-mantle);
-  border-bottom: 1px solid var(--ctp-surface0);
   width: 100%;
   box-sizing: border-box;
   word-break: keep-all;
@@ -18,10 +18,10 @@ header {
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
   border: 2px solid var(--ctp-mauve);
   background-color: var(--ctp-surface0);
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 /* Header Left */
@@ -34,11 +34,11 @@ header {
 nav {
   display: block;
   align-items: center;
-  padding: 0 0.75rem;
+  padding-right: 0.55em;
 }
 
 nav a {
-  margin-right: 0.625rem;
+  margin-left: 0.625rem;
   text-decoration: none;
   color: var(--ctp-text);
 }
@@ -91,7 +91,6 @@ nav a {
 }
 
 .menu {
-  view-transition-name: none;
   display: flex;
   gap: 1rem;
 
@@ -128,7 +127,9 @@ nav a {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1.2em;
   gap: 5px;
   z-index: 1001;
 }
@@ -208,6 +209,4 @@ nav a {
   width: 100%;
 }
 
-nav {
-  view-transition-name: none;
-}
+
