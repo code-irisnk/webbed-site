@@ -9,26 +9,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import '@catppuccin/palette/css/catppuccin.css';
 
-/* Catppuccin Mocha Color Variables */
+/* Catppuccin Mocha Color Variables (Default Dark) */
 :root {
-  --ctp-base: #1e1e2e;
-  --ctp-mantle: #181825;
-  --ctp-crust: #11111b;
-  --ctp-surface0: #313244;
-  --ctp-surface1: #45475a;
-  --ctp-surface2: #585b70;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
-  --ctp-mauve: #cba6f7;
+  /* Map to Mocha (Dark) by default */
+  --ctp-base: var(--ctp-mocha-base);
+  --ctp-mantle: var(--ctp-mocha-mantle);
+  --ctp-crust: var(--ctp-mocha-crust);
+  --ctp-surface0: var(--ctp-mocha-surface0);
+  --ctp-surface1: var(--ctp-mocha-surface1);
+  --ctp-surface2: var(--ctp-mocha-surface2);
+  --ctp-overlay0: var(--ctp-mocha-overlay0);
+  --ctp-overlay1: var(--ctp-mocha-overlay1);
+  --ctp-overlay2: var(--ctp-mocha-overlay2);
+  --ctp-text: var(--ctp-mocha-text);
+  --ctp-subtext0: var(--ctp-mocha-subtext0);
+  --ctp-subtext1: var(--ctp-mocha-subtext1);
+
+  /* Accents */
+  --ctp-mauve: var(--ctp-mocha-mauve);
+  --ctp-red: var(--ctp-mocha-red);
+  --ctp-blue: var(--ctp-mocha-blue);
+  --ctp-green: var(--ctp-mocha-green);
+  --ctp-yellow: var(--ctp-mocha-yellow);
+  --ctp-pink: var(--ctp-mocha-pink);
+  --ctp-teal: var(--ctp-mocha-teal);
+  --ctp-lavender: var(--ctp-mocha-lavender);
+  --ctp-rosewater: var(--ctp-mocha-rosewater);
+  --ctp-flamingo: var(--ctp-mocha-flamingo);
+  --ctp-maroon: var(--ctp-mocha-maroon);
+  --ctp-peach: var(--ctp-mocha-peach);
+  --ctp-sapphire: var(--ctp-mocha-sapphire);
+  --ctp-sky: var(--ctp-mocha-sky);
+
+  /* Custom */
   --ctp-mauve-dim: #b4a5dc;
+  --link-visited: #ddb6f2;
 
   --radius: 12px;
   --radius-sm: 8px;
   --radius-lg: 16px;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Catppuccin Latte Color Variables (Light) */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Map to Latte (Light) */
+    --ctp-base: var(--ctp-latte-base);
+    --ctp-mantle: var(--ctp-latte-mantle);
+    --ctp-crust: var(--ctp-latte-crust);
+    --ctp-surface0: var(--ctp-latte-surface0);
+    --ctp-surface1: var(--ctp-latte-surface1);
+    --ctp-surface2: var(--ctp-latte-surface2);
+    --ctp-overlay0: var(--ctp-latte-overlay0);
+    --ctp-overlay1: var(--ctp-latte-overlay1);
+    --ctp-overlay2: var(--ctp-latte-overlay2);
+    --ctp-text: var(--ctp-latte-text);
+    --ctp-subtext0: var(--ctp-latte-subtext0);
+    --ctp-subtext1: var(--ctp-latte-subtext1);
+
+    /* Accents */
+    --ctp-mauve: var(--ctp-latte-mauve);
+    --ctp-red: var(--ctp-latte-red);
+    --ctp-blue: var(--ctp-latte-blue);
+    --ctp-green: var(--ctp-latte-green);
+    --ctp-yellow: var(--ctp-latte-yellow);
+    --ctp-pink: var(--ctp-latte-pink);
+    --ctp-teal: var(--ctp-latte-teal);
+    --ctp-lavender: var(--ctp-latte-lavender);
+    --ctp-rosewater: var(--ctp-latte-rosewater);
+    --ctp-flamingo: var(--ctp-latte-flamingo);
+    --ctp-maroon: var(--ctp-latte-maroon);
+    --ctp-peach: var(--ctp-latte-peach);
+    --ctp-sapphire: var(--ctp-latte-sapphire);
+    --ctp-sky: var(--ctp-latte-sky);
+
+    /* Custom */
+    --ctp-mauve-dim: #7229c9;
+    --link-visited: #7229c9;
+  }
 }
 
 html,
@@ -71,7 +133,7 @@ a:hover {
 }
 
 a:visited {
-  color: #ddb6f2;
+  color: var(--link-visited);
 }
 
 /* Ensure app-root doesn't force unnecessary height */
@@ -122,9 +184,6 @@ section {
 
 .section {
   padding: min(5vw, 2rem);
-}
-
-.section {
   border-bottom: 0.0625rem solid var(--ctp-surface1);
   border-radius: var(--radius-lg);
   margin: 1rem auto;
@@ -196,10 +255,6 @@ section {
 .center {
   margin-left: auto;
   margin-right: auto;
-}
-
-.center2 {
-  margin: 0 auto;
 }
 
 @media (max-width: 37.5rem) {

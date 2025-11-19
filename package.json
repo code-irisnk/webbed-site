@@ -21,6 +21,7 @@
     "@angular/platform-server": "^20.3.10",
     "@angular/router": "^20.3.10",
     "@angular/ssr": "^20.3.9",
+    "@catppuccin/palette": "^1.7.1",
     "express": "^5.1.0",
     "rxjs": "~7.8.2",
     "tslib": "^2.8.1",
