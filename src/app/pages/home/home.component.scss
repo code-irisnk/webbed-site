@@ -11,3 +11,17 @@
   pointer-events: none;
   visibility: hidden;
 }
+
+.tauon-uptime-badge {
+  vertical-align: middle;
+}
+
+.tauon-uptime-container {
+  display: inline-flex;
+  margin-left: 0.35em;
+}
+
+section.music-player {
+  display: inline-flex;
+  align-items: center;
+}
