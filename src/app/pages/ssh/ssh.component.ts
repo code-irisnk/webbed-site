@@ -28,9 +28,9 @@ export class SshComponent {
       comment: 'openpgp:0xDB3D4BFC',
     },
     {
-      name: 'Yubikey',
-      key: 'sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIMusIxvnxnzAK27iThvDT7gYfDn/V6cNbqHq7xQ2ejkeAAAACHNzaDp5dWJp',
-      comment: 'irisnk@yubikey',
+      name: 'token2/ruthenium',
+      key: 'sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAII4NAvLYAqM5IEtKaHFoJBqGibjpVad3iPkucVQmHrnMAAAADXNzaDpydXRoZW5pdW0=',
+      comment: 'irisnk@ruthenium',
     },
   ];
 
