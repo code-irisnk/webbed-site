@@ -13,11 +13,6 @@ export class SshComponent {
       comment: 'irisnk@ruthenium',
     },
     {
-      name: 'ektron',
-      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILjPSOsni9cZ8MJNZI9QE8AAYe5W7KvV35MWEmbdxcM3',
-      comment: 'irisnk@ektron',
-    },
-    {
       name: 'dionysus',
       key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMZnMGAjr3WbNkvk0aeeWJBnXAoS8pk5TaS1LZtjGNP',
       comment: 'u0_a370@localhost',
@@ -30,7 +25,7 @@ export class SshComponent {
     {
       name: 'token2/ruthenium',
       key: 'sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAII4NAvLYAqM5IEtKaHFoJBqGibjpVad3iPkucVQmHrnMAAAADXNzaDpydXRoZW5pdW0=',
-      comment: 'irisnk@ruthenium',
+      comment: 'token2@ruthenium',
     },
   ];
 
