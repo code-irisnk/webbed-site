@@ -13,6 +13,11 @@ export class SshComponent {
       comment: 'irisnk@ruthenium',
     },
     {
+      name: 'token2/ruthenium',
+      key: 'sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAII4NAvLYAqM5IEtKaHFoJBqGibjpVad3iPkucVQmHrnMAAAADXNzaDpydXRoZW5pdW0=',
+      comment: 'token2@ruthenium',
+    },
+    {
       name: 'dionysus',
       key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMZnMGAjr3WbNkvk0aeeWJBnXAoS8pk5TaS1LZtjGNP',
       comment: 'u0_a370@localhost',
@@ -21,11 +26,6 @@ export class SshComponent {
       name: 'PGP',
       key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG4ztjl0IHF83b4YcqMNxK/JBxTOggnzBJ5g2yQpCbM+',
       comment: 'openpgp:0xDB3D4BFC',
-    },
-    {
-      name: 'token2/ruthenium',
-      key: 'sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAII4NAvLYAqM5IEtKaHFoJBqGibjpVad3iPkucVQmHrnMAAAADXNzaDpydXRoZW5pdW0=',
-      comment: 'token2@ruthenium',
     },
   ];
 
