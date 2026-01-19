@@ -43,9 +43,10 @@ export default tseslint.config(
         'error',
         {
           printWidth: 120,
-          htmlWhitespaceSensitivity: 'strict',
+          htmlWhitespaceSensitivity: 'ignore',
           bracketSameLine: true,
           singleAttributePerLine: false,
+          proseWrap: 'preserve',
         },
       ],
     },
