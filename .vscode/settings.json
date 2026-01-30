@@ -40,5 +40,8 @@
   },
 
   // Silence noisy ESLint messages when formatting
-  "eslint.alwaysShowStatus": true
+  "eslint.alwaysShowStatus": true,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

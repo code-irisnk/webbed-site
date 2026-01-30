@@ -1,0 +1,13 @@
+a {
+  color: var(--ctp-text);
+  text-decoration: underline dashed;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-style: solid;
+}
+
+ul {
+  padding-left: 1em;
+}
