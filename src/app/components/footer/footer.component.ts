@@ -8,5 +8,4 @@ import { environment } from '../../../environments/environment';
 })
 export class FooterComponent {
   commitSha: string = environment.commitSha;
-  commitShaFull: string = environment.commitShaFull;
 }
