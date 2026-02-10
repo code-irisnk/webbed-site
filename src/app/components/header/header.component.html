@@ -1,0 +1,39 @@
+<header>
+  <div class="header-left h-card">
+    <img
+      [routerLink]="['']"
+      id="profile-picture"
+      class="u-photo"
+      ngSrc="index/pfp.png"
+      ngSrcset="50w, 100w, 200w, 2048w"
+      alt="Profile Picture"
+      width="512"
+      height="512"
+      priority="" />
+    <h1 [routerLink]="['']" id="wobble" aria-label="Iris" class="p-name u-url">
+      <span class="wobble wobble1">I</span>
+      <span class="wobble wobble2">r</span>
+      <span class="wobble wobble3">i</span>
+      <span class="wobble wobble4">s</span>
+    </h1>
+  </div>
+
+  <!-- Hamburger and toggle -->
+  <input type="checkbox" id="menu-toggle" />
+  <label class="hamburger" for="menu-toggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="menu">
+    <a [routerLink]="['git']" routerLinkActive="active" [attr.tabindex]="null">Git</a>
+    <a [routerLink]="['contact']" routerLinkActive="active" [attr.tabindex]="null">Contact</a>
+    <a [routerLink]="['ssh']" routerLinkActive="active" [attr.tabindex]="null">SSH</a>
+    <a [routerLink]="['donate']" routerLinkActive="active" [attr.tabindex]="null">Donate</a>
+    <a [routerLink]="['socials']" routerLinkActive="active" [attr.tabindex]="null">Socials</a>
+    <a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [attr.tabindex]="null"
+      >Home</a
+    >
+  </nav>
+</header>
