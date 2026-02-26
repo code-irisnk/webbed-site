@@ -1,6 +1,5 @@
 {
   "name": "webbed-site",
-  "type": "module",
   "version": "2.0.1-ssg",
   "scripts": {
     "build": "ng build --configuration production",
