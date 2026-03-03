@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-
+import { BLOG_POSTS } from './pages/blog/blog-registry';
 export const routes: Routes = [
   {
     path: '',
@@ -29,10 +29,10 @@ export const routes: Routes = [
     path: 'blog',
     loadComponent: () => import('./pages/blog/blog.component').then((m) => m.BlogComponent),
   },
-  {
-    path: 'blog/:slug',
-    loadComponent: () =>
-      import('./pages/blog/blog-post-shell/blog-post-shell.component').then((m) => m.BlogPostShellComponent),
-  },
+  ...BLOG_POSTS.map((post) => ({
+    path: `blog/${post.slug}`,
+    loadComponent: post.loadComponent,
+  })),
+
   { path: '**', redirectTo: '' },
 ];
