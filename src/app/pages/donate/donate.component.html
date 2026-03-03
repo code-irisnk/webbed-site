@@ -35,7 +35,7 @@
         <li class="p-payment-method">
           {{ crypto.coin }}:
           <button (click)="copyToClipboard(crypto.address, crypto.coin)" class="copy-button" type="button">
-            {{ copiedCoin === crypto.coin ? 'Copied!' : 'Click to copy' }}
+            {{ copiedCoin === crypto.coin ? 'Copied!' : 'Copy' }}
           </button>
         </li>
       }

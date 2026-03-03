@@ -1,0 +1,35 @@
+hr {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 40rem;
+  border: none;
+  border-top: 1px solid var(--ctp-subtext0);
+  opacity: 0.5;
+}
+
+.post-meta {
+  color: var(--ctp-subtext1);
+  font-size: 0.85rem;
+}
+
+.post-desc {
+  margin: 0 0 0.5rem 0.6ch;
+  color: var(--ctp-subtext0);
+  font-size: 0.9rem;
+}
+
+.post-link {
+  text-decoration: none;
+}
+
+.post-link:hover {
+  text-decoration: underline dashed;
+}
+
+.post-link:active {
+  text-decoration: underline solid;
+}
+
+li::before {
+  content: none;
+}

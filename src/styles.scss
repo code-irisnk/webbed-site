@@ -286,11 +286,12 @@ router-outlet {
 .copy-button {
   padding: 2px 8px;
   margin-left: 5px;
+  font-weight: normal;
   background-color: var(--ctp-surface0);
   border: 1px solid var(--ctp-surface1);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--ctp-text);
   text-align: center;
   display: inline-block;
@@ -300,6 +301,7 @@ router-outlet {
 }
 
 .copy-button:hover {
+  font-weight: bold;
   background-color: var(--ctp-surface1);
   border-color: var(--ctp-mauve);
   color: var(--ctp-mauve);
@@ -307,7 +309,6 @@ router-outlet {
 
 .copy-button:focus {
   outline: none;
-  box-shadow: 0 0 5px var(--ctp-mauve);
 }
 
 .copy-button:active {
@@ -320,4 +321,9 @@ router-outlet {
   border-color: var(--ctp-surface1);
   cursor: not-allowed;
   color: var(--ctp-subtext0);
+}
+
+.p-payment-method {
+  display: flex;
+  align-items: center;
 }

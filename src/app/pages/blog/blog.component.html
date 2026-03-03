@@ -1,0 +1,14 @@
+<section class="info center column">
+  <h2>Blog</h2>
+  <p>Thoughts, rants, and the occasional tutorial.</p>
+  <hr />
+  <ul class="dotted-list">
+    @for (post of posts; track post.slug) {
+      <li>
+        <a [routerLink]="['/blog', post.slug]" class="post-link">{{ post.title }}</a>
+        <span class="post-meta"> :: {{ post.date }}</span>
+        <p class="post-desc">{{ post.description }}</p>
+      </li>
+    }
+  </ul>
+</section>

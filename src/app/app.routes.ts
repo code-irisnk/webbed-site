@@ -25,5 +25,14 @@ export const routes: Routes = [
     path: 'ssh',
     loadComponent: () => import('./pages/ssh/ssh.component').then((m) => m.SshComponent),
   },
+  {
+    path: 'blog',
+    loadComponent: () => import('./pages/blog/blog.component').then((m) => m.BlogComponent),
+  },
+  {
+    path: 'blog/:slug',
+    loadComponent: () =>
+      import('./pages/blog/blog-post-shell/blog-post-shell.component').then((m) => m.BlogPostShellComponent),
+  },
   { path: '**', redirectTo: '' },
 ];
