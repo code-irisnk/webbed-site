@@ -37,4 +37,17 @@
       text-decoration: underline solid;
     }
   }
+  .source {
+    color: var(--ctp-text);
+    text-decoration: dashed underline;
+    font-style: normal;
+    &:hover {
+      text-decoration: underline solid;
+      color: var(--ctp-mauve);
+    }
+    &:active {
+      text-decoration: underline solid var(--ctp-subtext0);
+      color: var(--ctp-subtext0);
+    }
+  }
 }
