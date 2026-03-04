@@ -11,7 +11,7 @@ export interface BlogPostMeta {
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
     slug: 'i-like-music-2025',
-    title: 'I like Music (2025)',
+    title: 'I Like Music (2025)',
     date: 'March 4, 2026',
     description: 'A recap of my favorite music of 2025',
     loadComponent: () =>

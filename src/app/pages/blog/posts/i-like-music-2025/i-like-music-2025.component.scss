@@ -10,7 +10,19 @@ ol {
 
 ul {
   margin-top: 0.625rem;
+  padding-left: 1rem;
+
+  li::marker {
+    content: '';
+  }
 }
 .nth-heading {
   margin-bottom: 1rem;
+}
+q {
+  font-style: italic;
+}
+
+.mention {
+  font-style: normal;
 }
