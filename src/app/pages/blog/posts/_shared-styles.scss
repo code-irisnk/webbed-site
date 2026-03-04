@@ -1,0 +1,40 @@
+@mixin apply {
+  h1 {
+    margin: 0;
+    font-family: 'Crimson Pro', serif;
+    color: var(--ctp-text);
+  }
+  h2 {
+    margin: 0;
+    font-family: 'Crimson Pro', serif;
+    color: var(--ctp-text);
+  }
+  hr {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 40rem;
+    border: none;
+    border-top: 1px solid var(--ctp-subtext0);
+    opacity: 0.5;
+  }
+  .info-container {
+    font-size: 0.9em;
+    color: var(--ctp-subtext0);
+    display: flex;
+    flex-direction: row;
+    gap: 1.5ch;
+  }
+
+  p {
+    margin: 0;
+  }
+  .back {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline dashed;
+    }
+    &:active {
+      text-decoration: underline solid;
+    }
+  }
+}
