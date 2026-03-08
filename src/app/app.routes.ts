@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { BLOG_POSTS } from './pages/blog/blog-registry';
+import { ogResolver } from './services/og.resolver';
+
 export const routes: Routes = [
   {
     path: '',
@@ -32,6 +34,7 @@ export const routes: Routes = [
   ...BLOG_POSTS.map((post) => ({
     path: `blog/${post.slug}`,
     loadComponent: post.loadComponent,
+    resolve: { og: ogResolver(post) },
   })),
 
   { path: '**', redirectTo: '' },

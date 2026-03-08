@@ -5,6 +5,7 @@ export interface BlogPostMeta {
   title: string;
   date: string;
   description: string;
+  ogImage?: string; // Optional absolute URL. Falls back to site pfp if omitted.
   loadComponent: () => Promise<Type<unknown>>;
 }
 
@@ -14,6 +15,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: 'I Like Music (2025)',
     date: 'March 4, 2026',
     description: 'A recap of my favorite music of 2025',
+    ogImage: 'https://irisnk.me/blog/music.webp',
     loadComponent: () =>
       import('./posts/i-like-music-2025/i-like-music-2025.component').then((m) => m.ILikeMusic2025PostComponent),
   },
