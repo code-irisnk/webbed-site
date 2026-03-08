@@ -29,11 +29,26 @@ q {
 
 #preview-img {
   margin-top: 1rem;
-  width: 40rem;
+  max-width: 40rem;
+  width: 100%;
   border: 1px solid var(--ctp-subtext0);
   border-radius: var(--radius-lg);
 }
 
+@media (max-width: 45rem) {
+  figure {
+    margin-inline: 0;
+  }
+
+  blockquote {
+    margin-inline: 0.5rem;
+  }
+
+  ol,
+  ul {
+    padding-left: 1.25rem;
+  }
+}
 #this-is-hell {
   margin-top: 0.4rem;
 }
