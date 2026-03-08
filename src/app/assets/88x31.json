@@ -55,11 +55,6 @@
     "href": "https://www.java.com/en/download/help/whatis_java.html"
   },
   {
-    "src": "88x31/jtvjan.png",
-    "alt": "JTVJan",
-    "href": "https://jtvjan.nl/"
-  },
-  {
     "src": "88x31/lastfm.png",
     "alt": "Last.fm",
     "href": "https://www.last.fm/user/nyaambxr"
@@ -83,11 +78,6 @@
     "src": "88x31/modrinth.png",
     "alt": "Modrinth",
     "href": "https://modrinth.com/"
-  },
-  {
-    "src": "88x31/preserve.gif",
-    "alt": "Archive.org",
-    "href": "https://archive.org/"
   },
   {
     "src": "88x31/source_logo.png",
@@ -125,12 +115,23 @@
     "href": "https://cyber.dabamos.de/88x31/"
   },
   {
-    "src": "88x31/anarchynow.gif",
-    "alt": "ANARCHY NOW"
-  },
-  {
     "src": "88x31/jellyfin.png",
     "alt": "i selfhost a jellyfin media server at home",
     "href": "https://jellyfin.org/"
+  },
+  {
+    "src": "88x31/jtvjan.png",
+    "alt": "JTVJan",
+    "href": "https://jtvjan.nl/"
+  },
+  {
+    "src": "88x31/dorm.gif",
+    "alt": "dorm. dorm.social. our dorm. it's on dorm. dorm has it for you.",
+    "href": "https://friends.dorm.social/"
+  },
+  {
+    "src": "88x31/voidplush.svg",
+    "alt": "voidplush",
+    "href": "https://voidpl.sh/"
   }
 ]
