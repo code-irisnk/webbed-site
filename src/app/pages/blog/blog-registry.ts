@@ -26,4 +26,11 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     description: 'First post. You know how it goes.',
     loadComponent: () => import('./posts/hello-world/hello-world.component').then((m) => m.HelloWorldPostComponent),
   },
+  {
+    slug: 'the-end-poem',
+    title: 'The End Poem',
+    date: 'June 12, 2023',
+    description: 'From a block game but it means something anyways.',
+    loadComponent: () => import('./posts/the-end-poem/the-end-poem.component').then((m) => m.TheEndPoemPostComponent),
+  },
 ];

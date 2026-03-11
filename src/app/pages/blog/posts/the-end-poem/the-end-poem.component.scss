@@ -1,0 +1,14 @@
+@use '../shared-styles' as *;
+
+.lime-entity {
+  color: var(--ctp-green);
+}
+
+.cyan-entity {
+  color: var(--ctp-sapphire);
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
