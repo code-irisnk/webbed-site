@@ -11,10 +11,17 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'iou',
+    title: 'U - underscores',
+    date: 'March 20, 2026',
+    description: 'A review of "U" by underscores.',
+    loadComponent: () => import('./posts/iou/iou.component').then((m) => m.IOUPostComponent),
+  },
+  {
     slug: 'i-like-music-2025',
     title: 'I Like Music (2025)',
     date: 'March 4, 2026',
-    description: 'A recap of my favorite music of 2025',
+    description: 'A recap of my favorite music of 2025!',
     ogImage: 'https://irisnk.me/blog/music.webp',
     loadComponent: () =>
       import('./posts/i-like-music-2025/i-like-music-2025.component').then((m) => m.ILikeMusic2025PostComponent),
