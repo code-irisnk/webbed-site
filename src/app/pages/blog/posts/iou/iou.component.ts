@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -6,6 +7,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './iou.component.html',
   styleUrl: './iou.component.scss',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
 })
 export class IOUPostComponent {}

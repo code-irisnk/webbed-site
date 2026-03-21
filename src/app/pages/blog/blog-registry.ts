@@ -15,6 +15,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: 'U - underscores',
     date: 'March 20, 2026',
     description: 'A review of "U" by underscores.',
+    ogImage: 'https://irisnk.me/blog/iou.webp',
     loadComponent: () => import('./posts/iou/iou.component').then((m) => m.IOUPostComponent),
   },
   {
