@@ -24,8 +24,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/socials/socials.component').then((m) => m.SocialsComponent),
   },
   {
-    path: 'ssh',
-    loadComponent: () => import('./pages/ssh/ssh.component').then((m) => m.SshComponent),
+    path: 'keys',
+    loadComponent: () => import('./pages/keys/keys.component').then((m) => m.KeysComponent),
   },
   {
     path: 'blog',

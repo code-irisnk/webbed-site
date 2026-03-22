@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-ssh',
-  templateUrl: './ssh.component.html',
-  styleUrls: ['./ssh.component.scss'],
+  selector: 'app-keys',
+  templateUrl: './keys.component.html',
+  styleUrls: ['./keys.component.scss'],
 })
-export class SshComponent {
+export class KeysComponent {
   sshKeys = [
     {
       name: 'ruthenium',
