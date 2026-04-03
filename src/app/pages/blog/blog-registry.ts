@@ -11,6 +11,13 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'bully',
+    title: 'BULLY - Kanye West',
+    date: 'April 3, 2026',
+    description: 'Kanye is being lowered into the grave he dug himself.',
+    loadComponent: () => import('./posts/bully/bully.component').then((m) => m.BullyPostComponent),
+  },
+  {
     slug: 'clarence-clarity',
     title: 'Clarence Clarity',
     date: 'April 3, 2026',
