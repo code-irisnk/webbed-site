@@ -14,14 +14,14 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     slug: 'bully',
     title: 'BULLY - Kanye West',
     date: 'April 3, 2026',
-    description: 'Kanye is being lowered into the grave he dug himself.',
+    description: "Kanye's pathetic attempt at a comeback.",
     loadComponent: () => import('./posts/bully/bully.component').then((m) => m.BullyPostComponent),
   },
   {
     slug: 'clarence-clarity',
     title: 'Clarence Clarity',
     date: 'April 3, 2026',
-    description: "The 21st century's best experimental pop artist, probably.",
+    description: 'One of the best experimental pop artists.',
     loadComponent: () =>
       import('./posts/clarence-clarity/clarence-clarity.component').then((m) => m.ClarenceClarityPostComponent),
   },
