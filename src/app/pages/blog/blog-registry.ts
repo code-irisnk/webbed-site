@@ -11,6 +11,14 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'clarence-clarity',
+    title: 'Clarence Clarity',
+    date: 'April 3, 2026',
+    description: "The 21st century's best experimental pop artist, probably.",
+    loadComponent: () =>
+      import('./posts/clarence-clarity/clarence-clarity.component').then((m) => m.ClarenceClarityPostComponent),
+  },
+  {
     slug: 'iou',
     title: 'U - underscores',
     date: 'March 20, 2026',
