@@ -22,7 +22,7 @@ export const appConfig: ApplicationConfig = {
         scrollPositionRestoration: 'top',
         anchorScrolling: 'enabled',
       }),
-      withViewTransitions(),
+      withViewTransitions({ skipInitialTransition: true }),
     ),
 
     {
