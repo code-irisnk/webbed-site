@@ -5,7 +5,7 @@ import ts from 'typescript';
 
 const BASE_URL = 'https://irisnk.me';
 const ROUTES_FILE = resolve('src/app/app.routes.ts');
-const OUTPUT_FILE = join('dist', 'webbed-site', 'browser', 'sitemap.xml');
+const OUTPUT_FILE = join('src', 'app', 'assets', 'sitemap.xml');
 
 const moduleCache = new Map();
 
