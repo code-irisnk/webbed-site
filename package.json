@@ -4,7 +4,7 @@
   "scripts": {
     "build": "node src/generate-sitemap.mjs && ng build --configuration production",
     "dev": "ng serve --configuration development",
-    "deploy": "tsc deploy.ts && node deploy.js",
+    "deploy": "tsc -p tsconfig.deploy.json && node dist/deploy/deploy.js",
     "format:ts": "eslint --ext .ts,.tsx,.js,.jsx,.html --fix .",
     "format:css": "prettier --write '**/*.{css,scss,html,ts}'",
     "format": "pnpm run format:ts && pnpm run format:css",
