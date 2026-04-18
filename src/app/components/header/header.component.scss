@@ -3,7 +3,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-items: center;
   padding: 0.75rem 1rem;
   background-color: var(--ctp-mantle);
   width: 100%;
@@ -32,15 +31,7 @@ header {
 
 /* Navigation */
 nav {
-  display: block;
-  align-items: center;
   padding-right: 0.6rem;
-}
-
-nav a {
-  margin-left: 0.625rem;
-  text-decoration: none;
-  color: var(--ctp-text);
 }
 
 /* Text Animation */
@@ -93,13 +84,24 @@ nav a {
 .menu {
   display: flex;
   gap: 1rem;
-  align-items: flex;
-  justify-content: flex;
+
   a {
     text-decoration: none;
     color: var(--ctp-text);
     border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
 
     &:hover {
       color: var(--ctp-mauve);
@@ -108,16 +110,9 @@ nav a {
     &.active {
       font-weight: bold;
       color: var(--ctp-mauve);
-      position: relative;
 
       &::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
         width: 100%;
-        height: 2px;
-        background-color: currentColor;
       }
     }
   }
@@ -179,36 +174,4 @@ nav a {
   #menu-toggle:checked ~ .menu {
     display: flex;
   }
-}
-
-.menu a {
-  text-decoration: none;
-  color: var(--ctp-text);
-  border-radius: 4px;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.menu a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: currentColor;
-  transition: width 0.3s ease;
-}
-
-.menu a:hover {
-  color: var(--ctp-mauve);
-}
-
-.menu a.active {
-  font-weight: bold;
-  color: var(--ctp-mauve);
-}
-
-.menu a.active::after {
-  width: 100%;
 }

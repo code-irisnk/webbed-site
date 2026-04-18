@@ -1,31 +1,7 @@
 @use '../shared-styles' as *;
 
-.nth-heading {
-  margin-bottom: 1rem;
-}
-
-q {
-  font-style: italic;
-}
-
 blockquote {
-  margin-left: 0;
-  margin-right: 0;
   font-style: italic;
-}
-
-#this-is-hell {
-  margin-top: 0.4rem;
-}
-
-@media (max-width: 45rem) {
-  figure {
-    margin-inline: 0;
-  }
-
-  blockquote {
-    margin-inline: 0.5rem;
-  }
 }
 
 sup {

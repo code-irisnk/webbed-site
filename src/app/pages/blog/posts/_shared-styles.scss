@@ -1,9 +1,5 @@
 @mixin apply {
-  h1 {
-    margin: 0;
-    font-family: 'Crimson Pro';
-    color: var(--ctp-text);
-  }
+  h1,
   h2 {
     margin: 0;
     font-family: 'Crimson Pro';
@@ -17,6 +13,10 @@
     border-top: 1px solid var(--ctp-subtext0);
     opacity: 0.5;
   }
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .info-container {
     font-size: 0.9em;
     color: var(--ctp-subtext0);
@@ -24,7 +24,27 @@
     flex-direction: row;
     gap: 1.5ch;
   }
-
+  .nth-heading {
+    margin-bottom: 1rem;
+  }
+  q {
+    font-style: italic;
+  }
+  #this-is-hell {
+    margin-top: 0.4rem;
+  }
+  #preview-img {
+    margin-top: 1rem;
+    max-width: 40rem;
+    max-height: 20rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--ctp-subtext0);
+    border-radius: var(--radius-lg);
+  }
+  .mention {
+    font-style: normal;
+  }
   p {
     margin: 0;
   }
@@ -48,6 +68,14 @@
     &:active {
       text-decoration: underline solid var(--ctp-subtext0);
       color: var(--ctp-subtext0);
+    }
+  }
+  @media (max-width: 45rem) {
+    figure {
+      margin-inline: 0;
+    }
+    blockquote {
+      margin-inline: 0.5rem;
     }
   }
 }
