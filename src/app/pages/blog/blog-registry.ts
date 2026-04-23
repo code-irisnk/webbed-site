@@ -11,6 +11,14 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'casino',
+    title: 'Ca$ino - Baby Keem',
+    date: 'April 23, 2026',
+    description: "Back-to-back hits held back by Keem's weak singing.",
+    ogImage: 'https://irisnk.me/blog/casino.webp',
+    loadComponent: () => import('./posts/casino/casino.component').then((m) => m.CasinoPostComponent),
+  },
+  {
     slug: 'bully',
     title: 'BULLY - Kanye West',
     date: 'April 3, 2026',
