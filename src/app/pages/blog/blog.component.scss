@@ -33,3 +33,12 @@ hr {
 li::before {
   content: none;
 }
+
+.rss-icon {
+  color: var(--ctp-peach);
+  margin-left: 2ch;
+  margin-bottom: -0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}

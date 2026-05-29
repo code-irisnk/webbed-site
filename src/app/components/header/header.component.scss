@@ -37,19 +37,19 @@ nav {
 /* Text Animation */
 @keyframes wobble {
   0% {
-    transform: translateY(-3px);
+    transform: translateY(-0.094em);
   }
   25% {
-    transform: translateY(3px);
+    transform: translateY(0.094em);
   }
   50% {
-    transform: translateY(-3px);
+    transform: translateY(-0.094em);
   }
   75% {
-    transform: translateY(3px);
+    transform: translateY(0.094em);
   }
   100% {
-    transform: translateY(-3px);
+    transform: translateY(-0.094em);
   }
 }
 
@@ -95,10 +95,10 @@ nav {
     &::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: -0.2rem;
       left: 0;
       width: 0%;
-      height: 2px;
+      height: 0.125rem;
       background-color: currentColor;
       transition: width 0.3s ease;
     }
@@ -126,15 +126,15 @@ nav {
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-right: 1.2em;
-  gap: 5px;
+  gap: 0.3rem;
   z-index: 1001;
 }
 
 .hamburger span {
-  height: 3px;
-  width: 25px;
+  height: 0.125rem;
+  width: 1.5rem;
   background: var(--ctp-text);
-  border-radius: 2px;
+  border-radius: 0.125rem;
   transition: 0.3s ease;
 }
 
@@ -145,7 +145,7 @@ nav {
 @media (max-width: 38.5rem) {
   .menu {
     position: absolute;
-    top: 110px;
+    top: 6.875em;
     right: 1rem;
     flex-direction: column;
     background-color: var(--ctp-mantle);
@@ -159,6 +159,7 @@ nav {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     margin-top: 0.5rem;
+    align-items: center;
   }
 
   .menu a {
