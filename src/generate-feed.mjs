@@ -1,5 +1,6 @@
 import { Feed } from 'feed';
 import * as fs from 'fs';
+import sanitizeHtml from 'sanitize-html';
 
 import { BLOG_POSTS } from './app/pages/blog/blog-registry.ts';
 // Files and imports in JS are WEIRD man.
@@ -9,6 +10,37 @@ const atomFilename = 'src/app/assets/blog/atom.xml';
 const today = new Date();
 
 const siteUrl = 'https://irisnk.me';
+
+const normalizeRelativeUrl = (url) => (url.startsWith('/') ? `${siteUrl}${url}` : url);
+
+const sanitizeFeedHtml = (html, postUrl) => {
+  // Remove Angular specific junk
+  const normalized = html
+    .replace(/routerLink="([^"]+)"/g, (_, link) => `href="${normalizeRelativeUrl(link)}"`)
+    .replace(/\[routerLink\]="\[\]" fragment="([^"]+)"/g, (_, fragment) => `href="${postUrl}#${fragment}"`)
+    .replace(/href="\/([^"]+)"/g, `href="${siteUrl}/$1"`)
+    .replace(/srcset="\/([^"]+)"/g, `srcset="${siteUrl}/$1"`)
+    .replace(/ngSrc="\/([^"]+)"/g, `src="${siteUrl}/$1"`)
+    .replace(/src="\/([^"]+)"/g, `src="${siteUrl}/$1"`);
+
+  // cool library cleans the rest up for me
+  return sanitizeHtml(normalized, {
+    allowedTags: [
+      'a', 'abbr', 'b', 'blockquote', 'br', 'cite', 'code', 'div', 'em', 'figcaption', 'figure',
+      'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i', 'img', 'li', 'ol', 'p', 'q', 'section', 'span',
+      'strong', 'ul', 'article', 'header', 'footer', 'pre', 'source'
+    ],
+    allowedAttributes: {
+      a: ['href', 'name', 'target', 'rel'],
+      img: ['src', 'alt', 'width', 'height', 'id'],
+      source: ['srcset', 'type'],
+      '*': ['id', 'aria-labelledby', 'aria-label']
+    },
+    allowedSchemes: ['http', 'https', 'mailto'],
+    allowedSchemesAppliedToAttributes: ['href', 'src', 'srcset'],
+    allowProtocolRelative: false,
+  });
+};
 
 const feed = new Feed({
   title: 'irisnk.me',
@@ -36,13 +68,15 @@ const feed = new Feed({
 for (const post of BLOG_POSTS) {
   const url = `${siteUrl}/blog/${post.slug}`;
   const postDate = new Date(post.date);
+  const htmlPath = `src/app/pages/blog/posts/${post.slug}/${post.slug}.component.html`;
+  const htmlContent = fs.readFileSync(htmlPath, 'utf8');
 
   const item = {
     title: post.title,
     id: url,
     link: url,
     description: post.description,
-    content: post.description,
+    content: sanitizeFeedHtml(htmlContent, url),
     date: postDate,
     published: postDate,
     author: [
