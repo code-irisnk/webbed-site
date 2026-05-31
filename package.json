@@ -2,7 +2,7 @@
   "name": "webbed-site",
   "version": "2.0.1-ssg",
   "scripts": {
-    "build": "node src/generate-sitemap.mjs && node src/generate-feed.mjs && ng build --configuration production",
+    "build": "node src/generate-sitemap.mjs && node src/generate-feed.mjs && node src/generate-json-feed.mjs && ng build --configuration production",
     "dev": "ng serve --configuration development",
     "deploy": "tsc -p tsconfig.deploy.json && node dist/deploy/deploy.js",
     "format:ts": "eslint --ext .ts,.tsx,.js,.jsx,.html --fix .",
@@ -12,10 +12,12 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cdk": "^21.2.13",
     "@angular/common": "^21.2.14",
     "@angular/compiler": "^21.2.14",
     "@angular/core": "^21.2.14",
     "@angular/forms": "^21.2.14",
+    "@angular/material": "^21.2.13",
     "@angular/platform-browser": "^21.2.14",
     "@angular/platform-browser-dynamic": "^21.2.14",
     "@angular/platform-server": "^21.2.14",

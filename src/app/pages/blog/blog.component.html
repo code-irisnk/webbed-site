@@ -1,13 +1,19 @@
 <section class="info center column">
   <h2>Blog</h2>
-  <p
-    >Thoughts, rants, and the occasional tutorial.
-
-    <a href="/blog/feed.xml" download class="rss-link" title="RSS feed">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="rss-icon" viewBox="0 0 16 16">
-        <path
-          d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2m0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2m.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" /></svg></a
-  ></p>
+  <div class="little-wrapper">
+  <p class="explainer">Thoughts, rants, and the occasional tutorial.</p>
+    <div class="icons">
+      <a href="/blog/feed.xml" download title="RSS feed">
+        <mat-icon svgIcon="my-rss" id="rss-icon"></mat-icon>
+      </a>
+      <a href="/blog/feed.atom" download title="Atom feed">
+        <mat-icon svgIcon="my-atom" id="atom-icon"></mat-icon>
+      </a>
+      <a href="/blog/feed.json" download title="JSON feed">
+        <mat-icon svgIcon="my-jsonfeed" id="jsonfeed-icon"></mat-icon>
+      </a>
+    </div>
+  </div>
   <hr />
   <ul class="dotted-list">
     @for (post of posts; track post.slug) {

@@ -7,7 +7,8 @@
 /bazel-out
 src/app/assets/sitemap.xml
 src/app/assets/blog/feed.xml
-
+src/app/assets/blog/atom.xml
+src/app/assets/blog/feed.json
 
 # Node
 /node_modules
