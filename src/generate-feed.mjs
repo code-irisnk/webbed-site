@@ -1,134 +1,67 @@
-import RSS from 'rss';
+import { Feed } from 'feed';
 import * as fs from 'fs';
 
 import { BLOG_POSTS } from './app/pages/blog/blog-registry.ts';
-
+// Files and imports in JS are WEIRD man.
 const xmlFilename = 'src/app/assets/blog/feed.xml';
 const jsonFilename = 'src/app/assets/blog/feed.json';
+const atomFilename = 'src/app/assets/blog/atom.xml';
 const today = new Date();
 
-// RSS feed
-const feed = new RSS({
+const siteUrl = 'https://irisnk.me';
+
+const feed = new Feed({
   title: 'irisnk.me',
   description: 'A nerd talks about music, computers and stuff.',
-  feed_url: 'https://irisnk.me/blog/feed.xml',
-  site_url: 'https://irisnk.me',
-  image_url: 'https://irisnk.me/favicon/android-chrome-192x192.png',
-  generator: 'git.elrant.team/irisnk/webbed-site',
-  managing_editor: 'Iris Nkrichronos',
-  webMaster: 'the@irisnk.me (Iris Nkrichronos)',
-  copyright: today.getFullYear() + ' Iris Nkrichronos',
+  id: siteUrl + '/',
+  link: siteUrl + '/',
   language: 'en',
-  categories: ['music', 'programming', 'personal'],
-  pubDate: today.toISOString(),
-  ttl: '120', // I do not post often
+  image: siteUrl + '/favicon/android-chrome-192x192.png',
+  favicon: siteUrl + '/favicon/android-chrome-192x192.png',
+  copyright: `${today.getFullYear()} Iris Nkrichronos`,
+  updated: today,
+  generator: 'git.elrant.team/irisnk/webbed-site',
+  feedLinks: {
+    rss: `${siteUrl}/blog/feed.xml`,
+    atom: `${siteUrl}/blog/atom.xml`,
+    json: `${siteUrl}/blog/feed.json`,
+  },
+  author: {
+    name: 'Iris Nkrichronos',
+    email: 'the@irisnk.me',
+    link: siteUrl,
+  },
 });
 
 for (const post of BLOG_POSTS) {
+  const url = `${siteUrl}/blog/${post.slug}`;
+  const postDate = new Date(post.date);
+
   const item = {
     title: post.title,
+    id: url,
+    link: url,
     description: post.description,
-    url: `https://irisnk.me/blog/${post.slug}`,
-    guid: post.slug,
-    date: post.date,
+    content: post.description,
+    date: postDate,
+    published: postDate,
+    author: [
+      {
+        name: 'Iris Nkrichronos',
+        email: 'the@irisnk.me',
+        link: siteUrl,
+      },
+    ],
   };
 
   if (post.ogImage) {
-    item.enclosure = {
-      url: post.ogImage,
-      type: 'image/jpeg',
-    };
+    item.image = post.ogImage;
   }
 
-  feed.item(item);
+  feed.addItem(item);
 }
 
-const xml = feed.xml();
-fs.writeFileSync(xmlFilename, xml);
 
-// JSON Feed
-function parseDate(value) {
-  const date = new Date(value);
-  return Number.isNaN(date.valueOf()) ? undefined : date.toISOString();
-}
-
-const jsonFeed = {
-  version: 'https://jsonfeed.org/version/1',
-  title: 'irisnk.me',
-  home_page_url: 'https://irisnk.me',
-  feed_url: 'https://irisnk.me/blog/feed.json',
-  description: 'A nerd talks about music, computers and stuff.',
-  user_comment: "JSON Feed for Iris Nkrichronos' blog",
-  icon: 'https://irisnk.me/favicon/android-chrome-192x192.png',
-  author: {
-    name: 'Iris Nkrichronos',
-    url: 'https://irisnk.me',
-    email: 'the@irisnk.me',
-  },
-  items: BLOG_POSTS.map((post) => {
-    const item = {
-      id: `https://irisnk.me/blog/${post.slug}`,
-      url: `https://irisnk.me/blog/${post.slug}`,
-      slug: post.slug,
-      title: post.title,
-      summary: post.description,
-      content_text: post.description,
-      date_published: parseDate(post.date),
-    };
-
-    if (post.ogImage) {
-      item.image = post.ogImage;
-    }
-
-    return item;
-  }),
-  expired: false,
-  authors: [
-    {
-      name: 'Iris Nkrichronos',
-      url: 'https://irisnk.me',
-      email: 'the@irisnk.me',
-    },
-  ],
-  items_count: BLOG_POSTS.length,
-  last_updated: today.toISOString(),
-};
-
-fs.writeFileSync(jsonFilename, JSON.stringify(jsonFeed, null, 2));
-
-// Atom feed
-const atomFilename = 'src/app/assets/blog/atom.xml';
-const atomEntries = BLOG_POSTS.map((post, i) => {
-  const base = parseDate(post.date) || today.toISOString();
-  const baseDate = new Date(base);
-  // Ensure each <updated> value is unique by offsetting by the index (ms)
-  const updated = new Date(baseDate.getTime() + i).toISOString();
-  const published = baseDate.toISOString();
-  const title = `<![CDATA[${post.title}]]>`;
-  const summary = `<![CDATA[${post.description}]]>`;
-  const enclosure = post.ogImage ? `<link rel="enclosure" type="image/jpeg" href="${post.ogImage}"/>` : '';
-  return [
-    '  <entry>',
-    `    <title>${title}</title>`,
-    `    <link href="https://irisnk.me/blog/${post.slug}"/>`,
-    `    <id>https://irisnk.me/blog/${post.slug}</id>`,
-    `    <published>${published}</published>`,
-    `    <updated>${updated}</updated>`,
-    `    <summary>${summary}</summary>`,
-    enclosure,
-    '  </entry>',
-  ].filter(Boolean).join('\n');
-}).join('\n');
-
-const atom = `<?xml version="1.0" encoding="utf-8"?>\n` +
-  `<feed xmlns="http://www.w3.org/2005/Atom">\n` +
-  `  <title>irisnk.me</title>\n` +
-  `  <link href="https://irisnk.me/blog/atom.xml" rel="self"/>\n` +
-  `  <link href="https://irisnk.me/"/>\n` +
-  `  <updated>${today.toISOString()}</updated>\n` +
-  `  <id>https://irisnk.me/</id>\n` +
-  `  <author><name>Iris Nkrichronos</name><email>the@irisnk.me</email></author>\n` +
-  `${atomEntries}\n` +
-  `</feed>`;
-
-fs.writeFileSync(atomFilename, atom);
+fs.writeFileSync(xmlFilename, feed.rss2());
+fs.writeFileSync(jsonFilename, feed.json1());
+fs.writeFileSync(atomFilename, feed.atom1());

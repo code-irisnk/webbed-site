@@ -25,7 +25,7 @@
     "@angular/ssr": "^21.2.12",
     "@catppuccin/palette": "^1.8.0",
     "express": "^5.2.1",
-    "rss": "^1.2.2",
+    "feed": "^5.2.1",
     "rxjs": "~7.8.2",
     "tslib": "^2.8.1",
     "zone.js": "~0.16.2"
