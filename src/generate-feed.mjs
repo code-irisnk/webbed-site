@@ -69,6 +69,7 @@ const jsonFeed = {
     const item = {
       id: `https://irisnk.me/blog/${post.slug}`,
       url: `https://irisnk.me/blog/${post.slug}`,
+      slug: post.slug,
       title: post.title,
       summary: post.description,
       content_text: post.description,
@@ -97,8 +98,12 @@ fs.writeFileSync(jsonFilename, JSON.stringify(jsonFeed, null, 2));
 
 // Atom feed
 const atomFilename = 'src/app/assets/blog/atom.xml';
-const atomEntries = BLOG_POSTS.map((post) => {
-  const updated = parseDate(post.date) || today.toISOString();
+const atomEntries = BLOG_POSTS.map((post, i) => {
+  const base = parseDate(post.date) || today.toISOString();
+  const baseDate = new Date(base);
+  // Ensure each <updated> value is unique by offsetting by the index (ms)
+  const updated = new Date(baseDate.getTime() + i).toISOString();
+  const published = baseDate.toISOString();
   const title = `<![CDATA[${post.title}]]>`;
   const summary = `<![CDATA[${post.description}]]>`;
   const enclosure = post.ogImage ? `<link rel="enclosure" type="image/jpeg" href="${post.ogImage}"/>` : '';
@@ -107,6 +112,7 @@ const atomEntries = BLOG_POSTS.map((post) => {
     `    <title>${title}</title>`,
     `    <link href="https://irisnk.me/blog/${post.slug}"/>`,
     `    <id>https://irisnk.me/blog/${post.slug}</id>`,
+    `    <published>${published}</published>`,
     `    <updated>${updated}</updated>`,
     `    <summary>${summary}</summary>`,
     enclosure,
