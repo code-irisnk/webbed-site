@@ -13,32 +13,19 @@
 </div>
 <section class="columns">
   <div class="column column-left">
-    <h2>Easy donation methods</h2>
+    <h2>Donation methods</h2>
     <ul class="dotted-list">
       <li>
         Ko-fi: <a href="https://ko-fi.com/nyaambxr" rel="me payment" class="u-url">Donate Now</a>, it has fees, but it's
         fast!
       </li>
       <li>
-        LiberaPay: <a href="https://liberapay.com/irisnk/" rel="me payment" class="u-url">Donate Now</a>, it's
+        LiberaPay: <a href="https://liberapay.com/irisnk/" rel="me payment" class="u-url">Donate Now</a>, it's ran by a
         non-profit!
       </li>
       <li>
         Bandcamp: <a href="https://archive.irisnk.me/" rel="me payment" class="u-url">Donate Now</a> and get Music!
       </li>
-    </ul>
-  </div>
-  <div class="column column-right">
-    <h2>Crypto options</h2>
-    <ul class="dotted-list">
-      @for (crypto of cryptoAddresses; track crypto) {
-        <li class="p-payment-method">
-          {{ crypto.coin }}:
-          <button (click)="copyToClipboard(crypto.address, crypto.coin)" class="copy-button" type="button">
-            {{ copiedCoin === crypto.coin ? 'Copied!' : 'Copy' }}
-          </button>
-        </li>
-      }
     </ul>
   </div>
 </section>

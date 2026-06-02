@@ -37,6 +37,8 @@ li::before {
 .explainer {
   margin-left: 0.1rem;
   width: 33ch;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .column {
@@ -47,7 +49,7 @@ li::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 2rem;
+  height: 4rem;
   width: 100%;
 }
 

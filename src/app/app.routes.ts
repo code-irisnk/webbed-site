@@ -20,8 +20,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/donate/donate.component').then((m) => m.DonateComponent),
   },
   {
-    path: 'socials',
-    loadComponent: () => import('./pages/socials/socials.component').then((m) => m.SocialsComponent),
+    path: 'profiles',
+    loadComponent: () => import('./pages/profiles/profiles.component').then((m) => m.ProfilesComponent),
   },
   {
     path: 'keys',
