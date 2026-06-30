@@ -257,6 +257,9 @@ section {
   .column {
     width: 100%;
   }
+  .column {
+    margin: 0;
+  }
 }
 
 router-outlet {
