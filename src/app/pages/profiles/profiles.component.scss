@@ -41,3 +41,19 @@
     content: url('/icons/dark/namemc.svg');
   }
 }
+
+.dotted-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.dotted-list li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dotted-list li::before {
+  margin-top: 0.25ch;
+}
