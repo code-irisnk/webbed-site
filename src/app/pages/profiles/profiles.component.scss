@@ -1,0 +1,43 @@
+@media (prefers-color-scheme: light) {
+  .dotted-list .youtube::before {
+    content: url('/icons/light/youtube.svg');
+  }
+
+  .dotted-list .twitch::before {
+    content: url('/icons/light/twitch.svg');
+  }
+
+  .dotted-list .soundcloud::before {
+    content: url('/icons/light/soundcloud.svg');
+  }
+
+  .dotted-list .bandcamp::before {
+    content: url('/icons/light/bandcamp.svg');
+  }
+
+  .dotted-list .namemc::before {
+    content: url('/icons/light/namemc.svg');
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dotted-list .youtube::before {
+    content: url('/icons/dark/youtube.svg');
+  }
+
+  .dotted-list .twitch::before {
+    content: url('/icons/dark/twitch.svg');
+  }
+
+  .dotted-list .soundcloud::before {
+    content: url('/icons/dark/soundcloud.svg');
+  }
+
+  .dotted-list .bandcamp::before {
+    content: url('/icons/dark/bandcamp.svg');
+  }
+
+  .dotted-list .namemc::before {
+    content: url('/icons/dark/namemc.svg');
+  }
+}

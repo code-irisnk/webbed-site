@@ -1,10 +1,12 @@
 @mixin apply {
   h1,
-  h2 {
+  h2,
+  h3 {
     margin: 0;
     font-family: 'Crimson Pro';
     color: var(--ctp-text);
   }
+
   hr {
     margin: 1rem auto;
     width: 100%;
