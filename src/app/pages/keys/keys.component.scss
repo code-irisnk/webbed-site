@@ -1,0 +1,29 @@
+li {
+  font-family: 'Google Sans Code';
+}
+.key-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  text-align: left;
+}
+
+.copy-button {
+  text-align: right;
+}
+.key-item {
+  position: relative;
+  padding: 0;
+}
+
+.key-item::before {
+  content: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+}

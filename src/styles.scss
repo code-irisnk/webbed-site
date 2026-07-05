@@ -1,0 +1,320 @@
+@use './app/pages/blog/posts/_shared-styles' as shared-styles;
+/* Reset and basic styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import '@catppuccin/palette/css/catppuccin.css';
+
+/* Catppuccin Mocha Color Variables (Default Dark) */
+:root {
+  /* Map to Mocha (Dark) by default */
+  --ctp-base: var(--ctp-mocha-base);
+  --ctp-mantle: var(--ctp-mocha-mantle);
+  --ctp-crust: var(--ctp-mocha-crust);
+  --ctp-surface0: var(--ctp-mocha-surface0);
+  --ctp-surface1: var(--ctp-mocha-surface1);
+  --ctp-surface2: var(--ctp-mocha-surface2);
+  --ctp-overlay0: var(--ctp-mocha-overlay0);
+  --ctp-overlay1: var(--ctp-mocha-overlay1);
+  --ctp-overlay2: var(--ctp-mocha-overlay2);
+  --ctp-text: var(--ctp-mocha-text);
+  --ctp-subtext0: var(--ctp-mocha-subtext0);
+  --ctp-subtext1: var(--ctp-mocha-subtext1);
+
+  /* Accents */
+  --ctp-mauve: var(--ctp-mocha-mauve);
+  --ctp-red: var(--ctp-mocha-red);
+  --ctp-blue: var(--ctp-mocha-blue);
+  --ctp-green: var(--ctp-mocha-green);
+  --ctp-yellow: var(--ctp-mocha-yellow);
+  --ctp-pink: var(--ctp-mocha-pink);
+  --ctp-teal: var(--ctp-mocha-teal);
+  --ctp-lavender: var(--ctp-mocha-lavender);
+  --ctp-rosewater: var(--ctp-mocha-rosewater);
+  --ctp-flamingo: var(--ctp-mocha-flamingo);
+  --ctp-maroon: var(--ctp-mocha-maroon);
+  --ctp-peach: var(--ctp-mocha-peach);
+  --ctp-sapphire: var(--ctp-mocha-sapphire);
+  --ctp-sky: var(--ctp-mocha-sky);
+
+  /* Custom */
+  --ctp-mauve-dim: #b4a5dc;
+  --link-visited: #ddb6f2;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Catppuccin Latte Color Variables (Light) */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Map to Latte (Light) */
+    --ctp-base: var(--ctp-latte-base);
+    --ctp-mantle: var(--ctp-latte-mantle);
+    --ctp-crust: var(--ctp-latte-crust);
+    --ctp-surface0: var(--ctp-latte-surface0);
+    --ctp-surface1: var(--ctp-latte-surface1);
+    --ctp-surface2: var(--ctp-latte-surface2);
+    --ctp-overlay0: var(--ctp-latte-overlay0);
+    --ctp-overlay1: var(--ctp-latte-overlay1);
+    --ctp-overlay2: var(--ctp-latte-overlay2);
+    --ctp-text: var(--ctp-latte-text);
+    --ctp-subtext0: var(--ctp-latte-subtext0);
+    --ctp-subtext1: var(--ctp-latte-subtext1);
+
+    /* Accents */
+    --ctp-mauve: var(--ctp-latte-mauve);
+    --ctp-red: var(--ctp-latte-red);
+    --ctp-blue: var(--ctp-latte-blue);
+    --ctp-green: var(--ctp-latte-green);
+    --ctp-yellow: var(--ctp-latte-yellow);
+    --ctp-pink: var(--ctp-latte-pink);
+    --ctp-teal: var(--ctp-latte-teal);
+    --ctp-lavender: var(--ctp-latte-lavender);
+    --ctp-rosewater: var(--ctp-latte-rosewater);
+    --ctp-flamingo: var(--ctp-latte-flamingo);
+    --ctp-maroon: var(--ctp-latte-maroon);
+    --ctp-peach: var(--ctp-latte-peach);
+    --ctp-sapphire: var(--ctp-latte-sapphire);
+    --ctp-sky: var(--ctp-latte-sky);
+
+    /* Custom */
+    --ctp-mauve-dim: #7229c9;
+    --link-visited: #7229c9;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
+body {
+  font-family: 'Rubik';
+  line-height: 1.6;
+  font-size: clamp(1rem, 2vw, 1rem);
+  word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin';
+  color: var(--ctp-mauve);
+}
+
+/* Links */
+a {
+  color: var(--ctp-mauve);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--ctp-mauve-dim);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+/* Ensure app-root doesn't force unnecessary height */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
+/* Header */
+app-header-component {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer styles */
+app-footer-component {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+/* Add specific control for the eighty-eight grid */
+.eighty-eight-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+  align-self: center;
+  align-content: center;
+}
+
+app-eighty-eight {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+}
+
+/* Sections */
+section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding: min(5vw, 2rem);
+  border-bottom: 0.0625rem solid var(--ctp-surface1);
+  border-radius: var(--radius-lg);
+  margin: 1rem auto;
+  max-width: 1200px;
+}
+
+/* Dotted List */
+.dotted-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dotted-list li {
+  margin-bottom: 0.3125rem;
+}
+
+.dotted-list li::before {
+  content: '•';
+  color: var(--ctp-mauve);
+  margin-right: 0.3125rem;
+}
+
+/* Last Child Styles */
+.dotted-list li:last-child {
+  margin-bottom: 0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.info h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info ul li {
+  margin-bottom: 0.3125rem;
+}
+
+/* Fix column heights */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 0;
+  width: 100%;
+}
+
+.column {
+  box-sizing: border-box;
+  padding: 1.25rem;
+  width: 42ch;
+  align-self: flex-start;
+  margin: 2em;
+  flex-shrink: 1;
+  height: auto;
+}
+
+/* Centered Content */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 37.5rem) {
+  .center,
+  .column {
+    width: 100%;
+  }
+  .column {
+    margin: 0;
+  }
+}
+
+router-outlet {
+  contain: paint;
+}
+
+.copy-button {
+  padding: 2px 8px;
+  margin-left: 5px;
+  font-weight: normal;
+  background-color: var(--ctp-surface0);
+  border: 1px solid var(--ctp-surface1);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--ctp-text);
+  text-align: center;
+  display: inline-block;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.copy-button:hover {
+  font-weight: bold;
+  background-color: var(--ctp-surface1);
+  border-color: var(--ctp-mauve);
+  color: var(--ctp-mauve);
+}
+
+.copy-button:focus {
+  outline: none;
+}
+
+.copy-button:active {
+  background-color: var(--ctp-surface2);
+  border-color: var(--ctp-mauve);
+}
+
+.copy-button:disabled {
+  background-color: var(--ctp-surface0);
+  border-color: var(--ctp-surface1);
+  cursor: not-allowed;
+  color: var(--ctp-subtext0);
+}
+
+.p-payment-method {
+  display: flex;
+  align-items: center;
+}
+
+.post {
+  @include shared-styles.apply;
+  margin: 0 auto;
+  max-width: 40rem;
+  font-family: 'Crimson Text', serif;
+  font-size: larger;
+}

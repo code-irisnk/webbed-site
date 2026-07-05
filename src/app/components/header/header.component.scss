@@ -1,0 +1,178 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--ctp-mantle);
+  width: 100%;
+  box-sizing: border-box;
+  word-break: keep-all;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Profile Picture */
+#profile-picture {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  border: 2px solid var(--ctp-mauve);
+  background-color: var(--ctp-surface0);
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Header Left */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  padding-right: 0.6rem;
+}
+
+/* Text Animation */
+@keyframes wobble {
+  0% {
+    transform: translateY(-0.094em);
+  }
+  25% {
+    transform: translateY(0.094em);
+  }
+  50% {
+    transform: translateY(-0.094em);
+  }
+  75% {
+    transform: translateY(0.094em);
+  }
+  100% {
+    transform: translateY(-0.094em);
+  }
+}
+
+.wobble {
+  display: inline-block;
+  animation: wobble 4s ease-in-out infinite;
+}
+
+.wobble1 {
+  animation-delay: 0s;
+}
+
+.wobble2 {
+  animation-delay: -0.2s;
+}
+
+.wobble3 {
+  animation-delay: -0.4s;
+}
+
+.wobble4 {
+  animation-delay: -0.6s;
+}
+
+/* Disable animation if prefers-reduced-motion is set */
+@media (prefers-reduced-motion) {
+  .wobble {
+    animation-duration: 0s;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: var(--ctp-text);
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+      width: 0%;
+      height: 0.125rem;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--ctp-mauve);
+    }
+
+    &.active {
+      font-weight: bold;
+      color: var(--ctp-mauve);
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1.2em;
+  gap: 0.3rem;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 0.125rem;
+  width: 1.5rem;
+  background: var(--ctp-text);
+  border-radius: 0.125rem;
+  transition: 0.3s ease;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 38.5rem) {
+  .menu {
+    position: absolute;
+    top: 6.875em;
+    right: 1rem;
+    flex-direction: column;
+    background-color: var(--ctp-mantle);
+    width: max-content;
+    min-width: 10rem;
+    padding: 1rem 0.75rem;
+    display: none;
+    z-index: 1000;
+    margin-left: auto;
+    border: 1px solid var(--ctp-surface1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+
+  .menu a {
+    padding: 0.5rem 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+}
