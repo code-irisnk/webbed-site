@@ -16,14 +16,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact.component').then((m) => m.ContactComponent),
   },
   {
-    path: 'donate',
-    loadComponent: () => import('./pages/donate/donate.component').then((m) => m.DonateComponent),
-  },
-  {
-    path: 'profiles',
-    loadComponent: () => import('./pages/profiles/profiles.component').then((m) => m.ProfilesComponent),
-  },
-  {
     path: 'keys',
     loadComponent: () => import('./pages/keys/keys.component').then((m) => m.KeysComponent),
   },
