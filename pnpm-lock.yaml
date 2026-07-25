@@ -163,6 +163,12 @@ importers:
         specifier: ^22.0.8
         version: 22.0.8
 
+  .angular/cache/angular-cli-tmp-packages-UJJNpQ:
+    dependencies:
+      '@angular/cli':
+        specifier: ^22.0.8
+        version: 22.0.8
+
   .angular/cache/angular-cli-tmp-packages-WPJXHm:
     dependencies:
       '@angular/cli':
