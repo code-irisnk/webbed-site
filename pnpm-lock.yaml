@@ -163,6 +163,12 @@ importers:
         specifier: ^22.0.8
         version: 22.0.8
 
+  .angular/cache/angular-cli-tmp-packages-w1GSEj:
+    dependencies:
+      '@angular/cli':
+        specifier: ^22.0.8
+        version: 22.0.8
+
 packages:
 
   '@algolia/abtesting@1.14.1':
