@@ -62,6 +62,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: 'The End Poem',
     date: 'June 12, 2023',
     description: 'From a block game but it means something anyways.',
+    ogImage: 'https://irisnk.me/blog/the-end-poem.webp',
     loadComponent: () => import('./posts/the-end-poem/the-end-poem.component').then((m) => m.TheEndPoemPostComponent),
   },
 ];
