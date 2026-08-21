@@ -18,9 +18,9 @@ export class KeysComponent {
       comment: 'token2@ruthenium',
     },
     {
+      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMZnMGAjr3WbNkvk0aeeWJBnXAoS8pk5TaS1LZtjGNP',
+      comment: 'u0_a370@localhost',
       name: 'onyx',
-      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBI4F2XrrqwJjdLixGhHoh4esGKR3fGVQszrDrRiDwX+',
-      comment: 'u0_a240@localhost',
     },
     {
       name: 'PGP',
