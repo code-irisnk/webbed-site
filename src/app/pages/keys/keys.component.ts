@@ -18,8 +18,8 @@ export class KeysComponent {
       comment: 'token2@ruthenium',
     },
     {
-      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMZnMGAjr3WbNkvk0aeeWJBnXAoS8pk5TaS1LZtjGNP',
-      comment: 'u0_a370@localhost',
+      key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF2kwkj+q8z11XViFyez5LhhRsjUKjf6PpoakxovaApA',
+      comment: 'u0_a351@localhost',
       name: 'onyx',
     },
     {
