@@ -11,6 +11,13 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'clod',
+    title: 'The Claudening',
+    date: 'August 23, 2026',
+    description: "Where's your head at?",
+    loadComponent: () => import('./posts/clod/clod.component').then((m) => m.ClodPostComponent),
+  },
+  {
     slug: 'casino',
     title: 'Ca$ino - Baby Keem',
     date: 'April 23, 2026',
