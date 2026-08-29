@@ -54,8 +54,15 @@ nav {
 }
 
 .wobble {
+  font-family: 'Google Sans Flex';
   display: inline-block;
   animation: wobble 4s ease-in-out infinite;
+  font-variation-settings:
+    'wght' 650,
+    'wdth' 100,
+    'slnt' 0,
+    'GRAD' 100,
+    'ROND' 100;
 }
 
 .wobble1 {
