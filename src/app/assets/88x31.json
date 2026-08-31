@@ -118,5 +118,15 @@
     "src": "88x31/dorm.gif",
     "alt": "dorm. dorm.social. our dorm. it's on dorm. dorm has it for you.",
     "href": "https://friends.dorm.social/"
+  },
+  {
+    "src": "88x31/twitter.png",
+    "alt": "get the FXK off twitter",
+    "href": "https://blog.irisnk.me/microblogging"
+  },
+  {
+    "src": "88x31/rss-button.gif",
+    "alt": "RSS Feed",
+    "href": "https://irisnk.me/blog/feed.xml"
   }
 ]
