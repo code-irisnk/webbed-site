@@ -1,0 +1,11 @@
+Hi! This is Iris!
+You found my humans.txt!
+
+I really like to work on this website, and the blog attached to it.
+
+Some patches on this website were provided by:
+github.com/vd0l1y
+github.com/Beta-51
+github.com/ioncorimenia
+github.com/jms-c
+freeplay.floof.company

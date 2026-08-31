@@ -1,8 +1,16 @@
 [
   {
+    "src": "88x31/100-slop-free.png",
+    "alt": "made by me. not tokens."
+  },
+  {
     "src": "88x31/amd_powered.gif",
     "alt": "AMD Powered",
     "href": "https://pcpartpicker.com/b/gBCzK8"
+  },
+  {
+    "src": "88x31/anarchynow.gif",
+    "alt": "Anarchy Now"
   },
   {
     "src": "88x31/ao3.png",
@@ -20,11 +28,6 @@
     "href": "https://archlinux.org/"
   },
   {
-    "src": "88x31/binbows.png",
-    "alt": "Windows/Other OS Archive",
-    "href": "https://winworldpc.com/library/operating-systems"
-  },
-  {
     "src": "88x31/chrome.gif",
     "alt": "ANYTHING but Chrome",
     "href": "https://zen-browser.app/"
@@ -35,14 +38,9 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
   {
-    "src": "88x31/fedora.gif",
-    "alt": "Fedora Powered",
-    "href": "https://getfedora.org/"
-  },
-  {
     "src": "88x31/firefox4.gif",
     "alt": "Use Firefox",
-    "href": "https://www.mozilla.org/en-US/firefox/all/#product-desktop-release"
+    "href": "https://zen-browser.app/"
   },
   {
     "src": "88x31/irisnk.png",
@@ -105,16 +103,6 @@
     "href": "https://badge.les.bi"
   },
   {
-    "src": "88x31/88x31.gif",
-    "alt": "heres where i found these badges",
-    "href": "https://cyber.dabamos.de/88x31/"
-  },
-  {
-    "src": "88x31/jellyfin.png",
-    "alt": "i selfhost a jellyfin media server at home",
-    "href": "https://jellyfin.org/"
-  },
-  {
     "src": "88x31/dorm.gif",
     "alt": "dorm. dorm.social. our dorm. it's on dorm. dorm has it for you.",
     "href": "https://friends.dorm.social/"
@@ -128,5 +116,17 @@
     "src": "88x31/rss-button.gif",
     "alt": "RSS Feed",
     "href": "https://irisnk.me/blog/feed.xml"
+  },
+  {
+    "src": "88x31/poetryrenaissance.png",
+    "alt": "poetry is not dead"
+  },
+  {
+    "src": "88x31/button_piracy.png",
+    "alt": "Piracy NOW!"
+  },
+  {
+    "src": "88x31/catlover.png",
+    "alt": "catlover"
   }
 ]
