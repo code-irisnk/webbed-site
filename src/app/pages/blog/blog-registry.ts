@@ -11,6 +11,13 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'music-art',
+    title: 'Music, art',
+    date: 'September 3, 2026',
+    description: "Space intentionally left not blank.",
+    loadComponent: () => import('./posts/music-art/music-art.component').then((m) => m.MusicArtPostComponent),
+  },
+  {
     slug: 'clod',
     title: 'The Claudening',
     date: 'August 23, 2026',
