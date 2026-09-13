@@ -11,6 +11,14 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'on-poly-stigma',
+    title: 'On Poly Stigma',
+    date: 'September 13, 2026',
+    description: 'On polyamory, family, and the inheritance of stigma.',
+    loadComponent: () =>
+      import('./posts/on-poly-stigma/on-poly-stigma.component').then((m) => m.OnPolyStigmaPostComponent),
+  },
+  {
     slug: 'music-art',
     title: 'Music, art',
     date: 'September 3, 2026',
