@@ -15,6 +15,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: 'On Poly Stigma',
     date: 'September 13, 2026',
     description: 'On polyamory, family, and the inheritance of stigma.',
+    ogImage: 'https://irisnk.me/blog/propaganda.webp',
     loadComponent: () =>
       import('./posts/on-poly-stigma/on-poly-stigma.component').then((m) => m.OnPolyStigmaPostComponent),
   },
