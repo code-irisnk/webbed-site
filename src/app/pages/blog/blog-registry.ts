@@ -20,6 +20,16 @@ export const BLOG_POSTS: BlogPostMeta[] = [
       import('./posts/on-poly-stigma/on-poly-stigma.component').then((m) => m.OnPolyStigmaPostComponent),
   },
   {
+    slug: 'because-the-internet',
+    title: 'because the internet',
+    date: 'September 5, 2026',
+    description: 'too much // sensitive topics',
+    loadComponent: () =>
+      import('./posts/because-the-internet/because-the-internet.component').then(
+        (m) => m.BecauseTheInternetPostComponent,
+      ),
+  },
+  {
     slug: 'music-art',
     title: 'Music, art',
     date: 'September 3, 2026',
