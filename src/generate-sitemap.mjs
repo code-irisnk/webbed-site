@@ -30,7 +30,7 @@ function normalizeRoute(route) {
 
 function toAbsoluteUrl(baseUrl, route) {
   const normalizedBase = baseUrl.replace(/\/+$/, '');
-  return route === '/' ? `${normalizedBase}/` : `${normalizedBase}${route}`;
+  return route === '/' ? `${normalizedBase}/` : `${normalizedBase}${route}/`;
 }
 
 function resolveTsPath(specifier, fromFile) {
@@ -135,7 +135,7 @@ function collectRoutes(routeDefs, parentPath = '') {
 
     const rawPath = typeof route.path === 'string' ? route.path : '';
 
-    if (rawPath === '**') continue;
+    if (rawPath === '**' || route.data?.noindex || route.data?.unlisted) continue;
 
     const fullPath = joinPaths(parentPath, rawPath);
 
@@ -154,18 +154,27 @@ function collectRoutes(routeDefs, parentPath = '') {
 }
 
 const { routes } = loadTsModule(ROUTES_FILE);
+const { BLOG_POSTS } = loadTsModule(resolve('src/app/pages/blog/blog-registry.ts'));
+
+const lastmods = new Map(BLOG_POSTS.map((post) => [`/blog/${post.slug}`, post.date]));
+lastmods.set(
+  '/blog',
+  BLOG_POSTS.map((post) => post.date)
+    .sort()
+    .at(-1),
+);
 
 const uniqueRoutes = [...new Set(collectRoutes(routes))];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${uniqueRoutes
-    .map(
-      (route) => `  <url>
-    <loc>${escapeXml(toAbsoluteUrl(BASE_URL, route))}</loc>
-  </url>`
-    )
-    .join('\n')}
+  .map(
+    (route) => `  <url>
+    <loc>${escapeXml(toAbsoluteUrl(BASE_URL, route))}</loc>${lastmods.has(route) ? `\n    <lastmod>${lastmods.get(route)}</lastmod>` : ''}
+  </url>`,
+  )
+  .join('\n')}
 </urlset>
 `;
 

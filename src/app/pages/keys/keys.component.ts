@@ -28,15 +28,4 @@ export class KeysComponent {
       comment: 'openpgp:0xDB3D4BFC',
     },
   ];
-
-  copiedKey: string | null = null;
-
-  copyToClipboard(text: string, name: string): void {
-    navigator.clipboard.writeText(text).then(() => {
-      this.copiedKey = name;
-      setTimeout(() => {
-        this.copiedKey = null;
-      }, 2000);
-    });
-  }
 }

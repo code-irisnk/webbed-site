@@ -1,3 +1,7 @@
+main:focus {
+  outline: none;
+}
+
 main {
   background-color: var(--ctp-base);
   border-radius: var(--radius-lg);

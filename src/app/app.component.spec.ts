@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [provideRouter([])],
     }).compileComponents();
   });
 
@@ -20,10 +22,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('webbed-site');
   });
 
-  it('should render title', () => {
+  it('should render a skip link that targets the main landmark', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, webbed-site');
+    expect(compiled.querySelector('a.skip-link')?.getAttribute('href')).toBe('#main');
+    expect(compiled.querySelector('main#main')).toBeTruthy();
   });
 });

@@ -1,33 +1,32 @@
 <header>
   <div class="header-left h-card">
-    <img
-      [routerLink]="['']"
-      id="profile-picture"
-      class="u-photo"
-      ngSrc="index/pfp.webp"
-      sizes="50px"
-      ngSrcset="50w, 100w, 200w"
-      alt="Profile Picture"
-      width="512"
-      height="512"
-      priority="" />
-    <h1 [routerLink]="['']" id="wobble" aria-label="Iris" class="p-name u-url">
-      <span class="wobble wobble1">I</span>
-      <span class="wobble wobble2">r</span>
-      <span class="wobble wobble3">i</span>
-      <span class="wobble wobble4">s</span>
-    </h1>
+    <a [routerLink]="['']" class="home-link u-url" aria-label="Iris, home page">
+      <img
+        id="profile-picture"
+        class="u-photo"
+        ngSrc="/index/pfp.webp"
+        sizes="50px"
+        ngSrcset="50w, 100w, 200w"
+        alt=""
+        width="512"
+        height="512"
+        priority="" />
+      <span id="wobble" class="p-name" aria-hidden="true">
+        <span class="wobble wobble1">I</span>
+        <span class="wobble wobble2">r</span>
+        <span class="wobble wobble3">i</span>
+        <span class="wobble wobble4">s</span>
+      </span>
+    </a>
   </div>
 
-  <!-- Hamburger and toggle -->
-  <input type="checkbox" id="menu-toggle" />
-  <label class="hamburger" for="menu-toggle" aria-label="Toggle menu">
+  <button type="button" class="hamburger" aria-label="Menu" popovertarget="site-menu">
     <span></span>
     <span></span>
     <span></span>
-  </label>
+  </button>
 
-  <nav class="menu">
+  <nav id="site-menu" class="menu" aria-label="Main" popover>
     <a href="https://donate.irisnk.me/" target="_blank" rel="noopener noreferrer" [attr.tabindex]="null">Donate</a>
     <a href="https://archive.irisnk.me/" target="_blank" rel="noopener noreferrer" [attr.tabindex]="null">Music</a>
     <a [routerLink]="['git']" routerLinkActive="active" [attr.tabindex]="null">Git</a>

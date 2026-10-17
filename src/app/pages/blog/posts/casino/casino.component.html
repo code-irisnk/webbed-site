@@ -2,7 +2,7 @@
   <header class="post-header">
     <h1 class="p-name">Ca$ino &mdash; Baby Keem</h1>
     <div class="info-container">
-      <p class="post-date dt-published">April 23, 2026</p>
+      <p class="post-date"><time class="dt-published" datetime="2026-04-23">April 23, 2026</time></p>
       <p class="post-lead p-summary">Back-to-back hits held back by Keem's weak singing.</p>
     </div>
   </header>
@@ -10,7 +10,13 @@
   <a href="/blog/casino-original.png" target="_blank" rel="noopener">
     <picture>
       <source srcset="/blog/casino.webp" type="image/webp" />
-      <img ngSrc="/blog/casino-original.png" id="preview-img" alt="The cover art of Ca$ino by Baby Keem" width="640" />
+      <img
+        ngSrc="/blog/casino-original.png"
+        priority
+        id="preview-img"
+        alt="The cover art of Ca$ino by Baby Keem"
+        width="640"
+        height="336" />
     </picture>
   </a>
 

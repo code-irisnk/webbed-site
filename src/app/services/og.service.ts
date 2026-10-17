@@ -10,7 +10,7 @@ export class OgService {
   setPostMeta(post: BlogPostMeta): void {
     const title = `${post.title} - a post by Iris`;
     const image = post.ogImage ?? 'https://irisnk.me/index/pfp.png';
-    const url = `https://irisnk.me/blog/${post.slug}`;
+    const url = `https://irisnk.me/blog/${post.slug}/`;
 
     this.title.setTitle(title);
 
@@ -19,13 +19,12 @@ export class OgService {
     this.meta.updateTag({ property: 'og:title', content: title });
     this.meta.updateTag({ property: 'og:description', content: post.description });
     this.meta.updateTag({ property: 'og:image', content: image });
+    // The defaults in index.html describe the profile picture, not a post's image.
+    for (const property of ['og:image:alt', 'og:image:width', 'og:image:height']) {
+      this.meta.removeTag(`property='${property}'`);
+    }
     this.meta.updateTag({ property: 'og:url', content: url });
     this.meta.updateTag({ property: 'og:type', content: 'article' });
     this.meta.updateTag({ property: 'og:site_name', content: 'Iris Nkrichronos' });
-
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-    this.meta.updateTag({ name: 'twitter:title', content: title });
-    this.meta.updateTag({ name: 'twitter:description', content: post.description });
-    this.meta.updateTag({ name: 'twitter:image', content: image });
   }
 }

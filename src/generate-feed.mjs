@@ -14,8 +14,9 @@ const siteUrl = 'https://irisnk.me';
 const normalizeRelativeUrl = (url) => (url.startsWith('/') ? `${siteUrl}${url}` : url);
 
 const sanitizeFeedHtml = (html, postUrl) => {
-  // Remove Angular specific junk
+  // Remove Angular specific junk; the feed item already carries the title and date, so drop the post header
   const normalized = html
+    .replace(/<header class="post-header">[\s\S]*?<\/header>/, '')
     .replace(/routerLink="([^"]+)"/g, (_, link) => `href="${normalizeRelativeUrl(link)}"`)
     .replace(/\[routerLink\]="\[\]" fragment="([^"]+)"/g, (_, fragment) => `href="${postUrl}#${fragment}"`)
     .replace(/href="\/([^"]+)"/g, `href="${siteUrl}/$1"`)
@@ -26,15 +27,45 @@ const sanitizeFeedHtml = (html, postUrl) => {
   // cool library cleans the rest up for me
   return sanitizeHtml(normalized, {
     allowedTags: [
-      'a', 'abbr', 'b', 'blockquote', 'br', 'cite', 'code', 'div', 'em', 'figcaption', 'figure',
-      'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hr', 'i', 'img', 'li', 'ol', 'p', 'q', 'section', 'span',
-      'strong', 'ul', 'article', 'header', 'footer', 'pre', 'source'
+      'a',
+      'abbr',
+      'b',
+      'blockquote',
+      'br',
+      'cite',
+      'code',
+      'div',
+      'em',
+      'figcaption',
+      'figure',
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6',
+      'hr',
+      'i',
+      'img',
+      'li',
+      'ol',
+      'p',
+      'q',
+      'section',
+      'span',
+      'strong',
+      'ul',
+      'article',
+      'header',
+      'footer',
+      'pre',
+      'source',
     ],
     allowedAttributes: {
       a: ['href', 'name', 'target', 'rel'],
       img: ['src', 'alt', 'width', 'height', 'id'],
       source: ['srcset', 'type'],
-      '*': ['id', 'aria-labelledby', 'aria-label']
+      '*': ['id', 'aria-labelledby', 'aria-label'],
     },
     allowedSchemes: ['http', 'https', 'mailto'],
     allowedSchemesAppliedToAttributes: ['href', 'src', 'srcset'],
@@ -95,7 +126,17 @@ for (const post of BLOG_POSTS) {
   feed.addItem(item);
 }
 
-
 fs.writeFileSync(xmlFilename, feed.rss2());
-fs.writeFileSync(jsonFilename, feed.json1());
+// The feed library only emits JSON Feed 1.0; 1.1 renames `author` to `authors`.
+const toJsonFeed11 = (json) => {
+  const upgradeAuthor = ({ author, ...rest }) => (author ? { ...rest, authors: [author] } : rest);
+  const { items, ...feedMeta } = JSON.parse(json);
+  return JSON.stringify(
+    { ...upgradeAuthor({ ...feedMeta, version: 'https://jsonfeed.org/version/1.1' }), items: items.map(upgradeAuthor) },
+    null,
+    4,
+  );
+};
+
+fs.writeFileSync(jsonFilename, toJsonFeed11(feed.json1()));
 fs.writeFileSync(atomFilename, feed.atom1());

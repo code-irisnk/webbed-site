@@ -4,5 +4,6 @@ allowBuilds:
   lmdb: true
   msgpackr-extract: true
   sharp: true
+  unrs-resolver: false
 minimumReleaseAgeExclude:
   - eslint@10.9.0

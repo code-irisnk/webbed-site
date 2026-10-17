@@ -3,6 +3,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "types": ["jest", "node"],
     "outDir": "./dist/out-tsc",
     "strict": true,
     "resolveJsonModule": true,

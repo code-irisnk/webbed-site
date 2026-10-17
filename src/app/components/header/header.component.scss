@@ -29,6 +29,20 @@ header {
   align-items: center;
 }
 
+.home-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+#wobble {
+  font-size: 2em;
+  font-weight: bold;
+  margin-block: 0.67em;
+  color: var(--ctp-mauve);
+}
+
 /* Navigation */
 nav {
   padding-right: 0.6rem;
@@ -54,7 +68,7 @@ nav {
 }
 
 .wobble {
-  font-family: 'Google Sans Flex';
+  font-family: 'Google Sans Flex Wordmark', 'Rubik Variable', sans-serif;
   display: inline-block;
   animation: wobble 4s ease-in-out infinite;
   font-variation-settings:
@@ -82,15 +96,26 @@ nav {
 }
 
 /* Disable animation if prefers-reduced-motion is set */
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   .wobble {
-    animation-duration: 0s;
+    animation: none;
   }
 }
 
 .menu {
+  // The menu is a popover (for the mobile button), but is plain inline navigation on wide screens.
   display: flex;
   gap: 1rem;
+  position: static;
+  inset: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  overflow: visible;
+  width: auto;
+  height: auto;
 
   a {
     text-decoration: none;
@@ -129,6 +154,9 @@ nav {
 .hamburger {
   display: none;
   flex-direction: column;
+  background: none;
+  border: none;
+  font: inherit;
   cursor: pointer;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -145,27 +173,25 @@ nav {
   transition: 0.3s ease;
 }
 
-#menu-toggle {
-  display: none;
-}
-
 @media (max-width: 38.5rem) {
   .menu {
-    position: absolute;
+    position: fixed;
     top: 6.875em;
     right: 1rem;
+    left: auto;
+    bottom: auto;
     flex-direction: column;
     background-color: var(--ctp-mantle);
+    color: var(--ctp-text);
     width: max-content;
     min-width: 10rem;
     padding: 1rem 0.75rem;
     display: none;
     z-index: 1000;
-    margin-left: auto;
+    margin: 0.5rem 0 0;
     border: 1px solid var(--ctp-surface1);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
-    margin-top: 0.5rem;
     align-items: center;
   }
 
@@ -179,7 +205,7 @@ nav {
     display: flex;
   }
 
-  #menu-toggle:checked ~ .menu {
+  .menu:popover-open {
     display: flex;
   }
 }

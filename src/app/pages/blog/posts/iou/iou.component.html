@@ -2,14 +2,20 @@
   <header class="post-header">
     <h1 class="p-name">U &mdash; underscores</h1>
     <div class="info-container">
-      <p class="post-date dt-published">March 20, 2026</p>
+      <p class="post-date"><time class="dt-published" datetime="2026-03-20">March 20, 2026</time></p>
       <p class="post-lead p-summary">A review of "U" by underscores</p>
     </div>
   </header>
   <a href="/blog/iou-original.png" target="_blank" rel="noopener">
     <picture>
       <source srcset="/blog/iou.webp" type="image/webp" />
-      <img ngSrc="/blog/iou-original.png" id="preview-img" alt="The cover art of U by underscores..." width="640" />
+      <img
+        ngSrc="/blog/iou-original.png"
+        priority
+        id="preview-img"
+        alt="The cover art of U by underscores..."
+        width="640"
+        height="336" />
     </picture>
   </a>
   <hr id="this-is-hell" />

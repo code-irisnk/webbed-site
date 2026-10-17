@@ -1,29 +1,31 @@
-li {
-  font-family: 'Google Sans Code';
-}
-.key-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.label {
-  text-align: left;
-}
-
-.copy-button {
-  text-align: right;
-}
-.key-item {
-  position: relative;
-  padding: 0;
-}
-
 .key-item::before {
   content: none;
-  position: absolute;
-  left: 0;
-  top: 50%;
+}
 
-  transform: translateY(-50%);
+.key-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.ssh-key {
+  font-family: 'Google Sans Code Variable', monospace;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--ctp-subtext0);
+}
+
+hr {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 40rem;
+  border: none;
+  border-top: 1px solid var(--ctp-subtext0);
+  opacity: 0.5;
 }

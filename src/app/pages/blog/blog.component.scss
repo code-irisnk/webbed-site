@@ -72,7 +72,8 @@ li::before {
 }
 
 #atom-icon {
-  fill: var(--ctp-teal);
+  fill: none;
+  stroke: var(--ctp-teal);
   color: var(--ctp-teal);
   margin-bottom: -0.5rem;
   width: 1.75rem;

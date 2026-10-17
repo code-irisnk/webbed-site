@@ -1,5 +1,4 @@
 # webbed site v2
-Now in Angular! (AKA: now needs JavaScript on the client to work)
 
 [Currently deployed!!!](https://irisnk.me/)
 
