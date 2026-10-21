@@ -1,1 +1,13 @@
 @use '../shared-styles' as *;
+
+#post {
+  p + p,
+  p + details,
+  details + p {
+    margin-top: 1.6em;
+  }
+}
+
+.last-updated {
+  color: var(--ctp-subtext0);
+}

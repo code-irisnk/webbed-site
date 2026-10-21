@@ -1,1 +1,10 @@
 @use '../shared-styles' as *;
+
+.content-warning {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--ctp-peach);
+  border-radius: var(--radius-lg);
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
