@@ -1,4 +1,14 @@
 @use '../shared-styles' as *;
+
+.content-warning {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--ctp-red);
+  border-radius: var(--radius-lg);
+  background-color: var(--ctp-mantle);
+  color: var(--ctp-text);
+}
+
 details {
   padding-top: 1rem;
   padding-bottom: 1rem;
