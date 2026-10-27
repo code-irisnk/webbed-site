@@ -15,6 +15,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: 'marroW - brakence',
     date: '2026-10-26',
     description: 'Four years later, brakence digs into himself.',
+    ogImage: 'https://irisnk.me/blog/marrow.webp',
     loadComponent: () => import('./posts/marrow/marrow.component').then((m) => m.MarrowPostComponent),
   },
   {
