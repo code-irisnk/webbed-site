@@ -1,1 +1,9 @@
 @use '../shared-styles' as *;
+details {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+iframe {
+  margin-top: 1rem;
+}

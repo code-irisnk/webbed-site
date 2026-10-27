@@ -14,7 +14,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     slug: 'marrow',
     title: 'marroW - brakence',
     date: '2026-10-26',
-    description: 'TODO: one-line summary.',
+    description: 'Four years later, brakence digs into himself.',
     loadComponent: () => import('./posts/marrow/marrow.component').then((m) => m.MarrowPostComponent),
   },
   {
