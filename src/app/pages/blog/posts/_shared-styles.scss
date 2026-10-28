@@ -75,7 +75,6 @@
     text-decoration: dashed underline;
     font-style: normal;
     &:hover {
-      text-decoration: underline solid;
       color: var(--ctp-mauve);
     }
     &:active {
@@ -89,6 +88,16 @@
     }
     blockquote {
       margin-inline: 0.5rem;
+    }
+  }
+  .shasum {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--ctp-subtext0);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline dashed;
+      color: var(--ctp-mauve);
     }
   }
 }
