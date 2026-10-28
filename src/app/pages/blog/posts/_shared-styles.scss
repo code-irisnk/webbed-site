@@ -28,6 +28,39 @@
     font-weight: 700;
   }
 
+  .post-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 1ch;
+    app-short-link {
+      display: contents;
+    }
+    h1 {
+      grid-column: 1;
+    }
+    .info-container {
+      grid-column: 1 / -1;
+    }
+  }
+  .short-link {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--ctp-blue);
+    cursor: pointer;
+    &.copied {
+      color: var(--ctp-green);
+    }
+    svg {
+      margin-top: 0.85rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
   .info-container {
     font-size: 0.9em;
     color: var(--ctp-subtext0);
