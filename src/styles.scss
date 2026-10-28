@@ -282,6 +282,12 @@ section {
   }
 }
 
+/* Commit links, in the site footer and post "last updated" lines */
+.shasum {
+  font-family: 'Google Sans Code Variable', monospace;
+  color: var(--ctp-mauve);
+}
+
 router-outlet {
   contain: paint;
 }

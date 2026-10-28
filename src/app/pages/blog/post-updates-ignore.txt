@@ -1,0 +1,4 @@
+# Commits that must not count as a post update, one sha (7 to 40 characters) per line.
+# Use this only when the automatic rules get it wrong. They already ignore merge commits,
+# the initial import, and changes that do not touch a post's text, links or images.
+# The next deploy picks the change up. To preview it, run `pnpm post-updates`.

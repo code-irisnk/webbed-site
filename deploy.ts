@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
 import { promises as fs } from 'fs';
 import * as path from 'path';
+import { updatePostUpdatesForDeploy } from './post-updates.js';
 
 // better root anchor
 const root = process.cwd();
@@ -37,4 +38,16 @@ async function updateEnvironmentFiles() {
   }
 }
 
-updateEnvironmentFiles().then(() => console.log('Done'));
+function updatePostUpdates() {
+  try {
+    updatePostUpdatesForDeploy();
+  } catch (error) {
+    console.error(`Error updating post updates: ${(error as Error).message}`);
+    process.exitCode = 1;
+  }
+}
+
+updateEnvironmentFiles().then(() => {
+  updatePostUpdates();
+  console.log('Done');
+});
