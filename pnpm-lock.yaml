@@ -94,8 +94,8 @@ importers:
         specifier: ^5.0.6
         version: 5.0.6
       '@types/jasmine':
-        specifier: ~6.0.0
-        version: 6.0.0
+        specifier: ~7.0.0
+        version: 7.0.0
       '@types/jest':
         specifier: ^30.0.0
         version: 30.0.0
@@ -2015,8 +2015,8 @@ packages:
   '@types/istanbul@0.4.34':
     resolution: {integrity: sha512-HwdlvCURCktjIuTMTuGDXutAomcYK3s+LT5I7iKHEPhylQ7AC6FvhrF0z6nvC3QfyF/RmZX2xuNgQvsCpxpybw==}
 
-  '@types/jasmine@6.0.0':
-    resolution: {integrity: sha512-18lgGsLmEh3VJk9eZ5wAjTISxdqzl6YOwu8UdMpolajN57QOCNbl+AbHUd+Yu9ItrsFdB+c8LSZSGNg8nHaguw==}
+  '@types/jasmine@7.0.0':
+    resolution: {integrity: sha512-6yNx9BsBSKiXO2yqLXs/GZDuD58Gkn6Ty26254FFOuw6B4XU5Xq8mAR0xFy8zHgAhqQd++y41fSJ8BdwrWXhqQ==}
 
   '@types/jest@30.0.0':
     resolution: {integrity: sha512-XTYugzhuwqWjws0CVz8QpM36+T+Dz5mTEBKhNs/esGLnCIlGdRy+Dq78NRjd7ls7r8BC8ZRMOrKlkO1hU0JOwA==}
@@ -6763,7 +6763,7 @@ snapshots:
 
   '@types/istanbul@0.4.34': {}
 
-  '@types/jasmine@6.0.0': {}
+  '@types/jasmine@7.0.0': {}
 
   '@types/jest@30.0.0':
     dependencies:
@@ -6808,7 +6808,7 @@ snapshots:
 
   '@types/karma-jasmine@4.0.5':
     dependencies:
-      '@types/jasmine': 6.0.0
+      '@types/jasmine': 7.0.0
       '@types/karma': 6.3.9
     transitivePeerDependencies:
       - supports-color
