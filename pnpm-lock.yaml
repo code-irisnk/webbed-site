@@ -130,8 +130,8 @@ importers:
         specifier: ^22.6.0
         version: 22.6.0(chokidar@5.0.0)(eslint@10.13.0)(typescript-eslint@8.71.2(eslint@10.13.0)(typescript@6.0.3))(typescript@6.0.3)
       baseline-browser-mapping:
-        specifier: ^2.11.29
-        version: 2.11.29
+        specifier: ^2.11.31
+        version: 2.11.31
       browser-sync:
         specifier: ^3.0.4
         version: 3.0.4
@@ -2398,8 +2398,8 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  baseline-browser-mapping@2.11.29:
-    resolution: {integrity: sha512-YeesxhUmR4h5y5V8KF8iBCqJb8YFrBJ++XBTeGcWIaQOYXGN19JM0FoiOjAhwuDoln8owMgXcWBmgHtYSkky2w==}
+  baseline-browser-mapping@2.11.31:
+    resolution: {integrity: sha512-b0k7wXlWjpuL/Uxb/pYlpjY0ej5BjAmurtPUk3eRGuloI4yjK32m8TiKUQ81l1ptcLjKS/KH2+uqIolZti1x4Q==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -7057,7 +7057,7 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  baseline-browser-mapping@2.11.29: {}
+  baseline-browser-mapping@2.11.31: {}
 
   batch@0.6.1: {}
 
@@ -7187,7 +7187,7 @@ snapshots:
 
   browserslist@4.29.3:
     dependencies:
-      baseline-browser-mapping: 2.11.29
+      baseline-browser-mapping: 2.11.31
       caniuse-lite: 1.0.30001816
       electron-to-chromium: 1.5.458
       node-releases: 2.0.59
