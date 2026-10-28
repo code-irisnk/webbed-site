@@ -45,7 +45,7 @@
     "@eslint/js": "^10.0.1",
     "@types/browser-sync": "2.29.1",
     "@types/express": "^5.0.6",
-    "@types/jasmine": "~6.0.0",
+    "@types/jasmine": "~7.0.0",
     "@types/jest": "^30.0.0",
     "@types/jsdom": "~30.0.0",
     "@types/karma": "~6.3.9",
