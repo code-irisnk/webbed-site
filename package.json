@@ -41,7 +41,7 @@
     "@angular/cli": "^22.2.4",
     "@angular/compiler-cli": "^22.2.3",
     "@angular/language-server": "^22.2.3",
-    "@angular/language-service": "^22.2.3",
+    "@angular/language-service": "^22.2.4",
     "@eslint/js": "^10.0.1",
     "@types/browser-sync": "2.29.1",
     "@types/express": "^5.0.6",
