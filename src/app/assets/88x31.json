@@ -99,11 +99,6 @@
     "href": "https://debian.org"
   },
   {
-    "src": "/88x31/transbian.png",
-    "alt": "im trans im lesbian",
-    "href": "https://badge.les.bi"
-  },
-  {
     "src": "/88x31/dorm.gif",
     "alt": "dorm. dorm.social. our dorm. it's on dorm. dorm has it for you.",
     "href": "https://friends.dorm.social/"
@@ -129,5 +124,10 @@
   {
     "src": "/88x31/catlover.png",
     "alt": "catlover"
+  },
+  {
+    "src": "/88x31/141100.png",
+    "alt": "dollcode 141100",
+    "href": "https://dolltags.pet/profile/141100"
   }
 ]
