@@ -19,7 +19,7 @@ header {
   border-radius: 50%;
   border: 2px solid var(--ctp-mauve);
   background-color: var(--ctp-surface0);
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
   margin-left: 0.5rem;
 }
 
@@ -37,6 +37,8 @@ header {
 }
 
 #wobble {
+  gap: 0.025em;
+  display: inline-flex;
   font-size: 2em;
   font-weight: bold;
   margin-block: 0.67em;
@@ -63,14 +65,11 @@ header {
 }
 
 .wobble {
-  font-family: 'Google Sans Flex Wordmark', 'Rubik Variable', sans-serif;
+  font-family: 'Allo', 'Rubik Variable', sans-serif;
   display: inline-block;
   animation: wobble 4s ease-in-out infinite;
   font-variation-settings:
-    'wght' 650,
-    'wdth' 100,
-    'slnt' 0,
-    'GRAD' 100,
+    'wght' 750,
     'ROND' 100;
 }
 

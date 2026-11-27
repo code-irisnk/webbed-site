@@ -14,16 +14,7 @@
 @import '@fontsource-variable/crimson-pro/wght.css';
 @import '@fontsource-variable/crimson-pro/wght-italic.css';
 @import '@fontsource-variable/google-sans-code/wght.css';
-
-/* Only the letters of the header wordmark, subset from Google Sans Flex with all of its axes kept. */
-@font-face {
-  font-family: 'Google Sans Flex Wordmark';
-  font-style: oblique 0deg 10deg;
-  font-weight: 1 1000;
-  font-stretch: 25% 151%;
-  font-display: swap;
-  src: url('/fonts/google-sans-flex-iris.woff2') format('woff2-variations');
-}
+@import 'allo-font/allo.css';
 
 /* Catppuccin Mocha Color Variables (Default Dark) */
 :root {
